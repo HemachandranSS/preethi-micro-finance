@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding Loans in India - Complete Guide</title>
+    <title>Programming Files Index</title>
     <style>
         * {
             margin: 0;
@@ -13,2002 +13,256 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #020c36 0%, #764ba2 100%);
+            background: linear-gradient(135deg,rgb(31, 7, 27) 0%, rgb(116, 79, 116) 100%);
             min-height: 100vh;
-            color: #333;
-        }
-
-        #keyFeature {
-            margin-left: 20px;
-        }
-        #detailDesc {
-            color: black;
+            padding: 20px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-            animation: fadeInDown 1s ease-out;
-        }
-
-        .header h1 {
-            color: white;
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .header p {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.2rem;
-        }
-
-        .section {
-            background: rgba(255,255,255,0.95);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            animation: slideInUp 0.8s ease-out;
-            animation-fill-mode: both;
-        }
-
-        .section:nth-child(even) {
-            animation-delay: 0.2s;
-        }
-
-        .section:nth-child(odd) {
-            animation-delay: 0.1s;
-        }
-
-        .section h2 {
-            color: #4a5568;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-            animation: pulse 2s infinite;
-        }
-
-        .loan-types {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .loan-card {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .loan-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .loan-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .calculator {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 30px;
             border-radius: 20px;
-            margin: 20px 0;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .calc-inputs {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
+        h1 {
+            text-align: center;
+            color: #540505;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #181a22, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .input-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .input-group label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .input-group input {
-            padding: 12px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            background: rgba(255,255,255,0.2);
-            color: white;
-            backdrop-filter: blur(10px);
-        }
-
-        .input-group input::placeholder {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .calc-button {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid white;
-            padding: 12px 30px;
-            border-radius: 25px;
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
             font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
         }
 
-        .calc-button:hover {
-            background: white;
-            color: #f5576c;
-            transform: scale(1.05);
+        .search-container {
+            margin-bottom: 30px;
+            position: relative;
         }
 
-        .result {
-            background: rgba(255,255,255,0.2);
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 20px;
-            backdrop-filter: blur(10px);
-            min-height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Credit score meter container */
-        .credit-score-meter {
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        }
-
-        .meter-arc {
+        .search-box {
             width: 100%;
-            height: 120px; /* adjust for visual size */
-            border-radius: 999px 999px 0 0; /* big radius -> semicircle look */
-            background: conic-gradient(
-                from -90deg at 50% 100%,
-                #ff6b6b 0deg 75deg,    /* 300–549 = 75° span (Poor) */
-                #ffa502 75deg 105deg,  /* 550–649 = 30° span (Fair) */
-                #f1c40f 105deg 135deg, /* 650–749 = 30° span (Good) */
-                #2ed573 135deg 180deg  /* 750–900 = 45° span (Excellent) */
-            );
+            padding: 15px 50px 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-box:focus {
+            border-color: #667eea;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .files-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .file-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
             position: relative;
             overflow: hidden;
-            box-shadow: inset 0 -6px 12px rgba(0,0,0,0.04);
-            }
+        }
 
-        /* Needle that pivots from bottom-center */
-            .meter-needle {
+        .file-card::before {
+            content: '';
             position: absolute;
-            left: 50%;
-            bottom: 14px;                /* pivot sits at bottom edge */
-            width: 6px;
-            height: 78px;                /* length of needle */
-            background: #333;            /* default color */
-            transform-origin: 50% 100%;  /* pivot at bottom-center of the needle */
-            transform: translateX(-50%) rotate(-90deg); /* default pointing left */
-            transition: transform 350ms cubic-bezier(.22,.9,.3,1), background 200ms;
-            border-radius: 3px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-            pointer-events: none;
-            }
-
-            .meter-pivot {
-                position: absolute;
-                left: 50%;
-                bottom: 6px;
-                transform: translateX(-50%);
-                width: 12px;
-                height: 12px;
-                background: #333;
-                border-radius: 50%;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-                }
-
-        .comparison-table {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .comparison-table th {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px;
-            text-align: left;
-        }
-
-        .comparison-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .comparison-table tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-
-        .warning-box {
-            background: linear-gradient(135deg, #ff9a56, #ff6b6b);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #ff4757;
-        }
-
-        .info-box {
-            background: linear-gradient(135deg, #74b9ff, #0984e3);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #0984e3;
-        }
-
-        .interactive-demo {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            padding: 25px;
-            border-radius: 20px;
-            margin: 20px 0;
-        }
-
-        .slider-container {
-            margin: 15px 0;
-        }
-
-        .slider {
-            width: 100%;
-            height: 8px;
-            border-radius: 5px;
-            background: #ddd;
-            outline: none;
-            margin: 10px 0;
-            -webkit-appearance: none;
-        }
-
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #667eea;
-            cursor: pointer;
-        }
-
-        .slider::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #667eea;
-            cursor: pointer;
-            border: none;
-        }
-
-        .visual-chart {
-            width: 100%;
-            height: 300px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 20px;
-            background: #e9ecef;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-
-        .progress-fill {
-            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
             background: linear-gradient(90deg, #667eea, #764ba2);
-            width: 0%;
-            transition: width 1s ease-out;
-            border-radius: 10px;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .file-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
         }
 
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 3px 8px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .tab-container {
-            margin: 20px 0;
-        }
-
-        .tabs {
+        .file-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 12px;
             display: flex;
-            border-bottom: 2px solid #eee;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .file-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .file-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .file-type {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
             flex-wrap: wrap;
         }
 
-        .tab {
-            padding: 15px 25px;
-            background: #f8f9fa;
-            border: none;
-            cursor: pointer;
-            border-radius: 10px 10px 0 0;
-            margin-right: 5px;
-            margin-bottom: 2px;
-            transition: all 0.3s ease;
+        .stat {
+            text-align: center;
         }
 
-        .tab.active {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            transform: translateY(-2px);
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
         }
 
-        .tab-content {
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .hidden {
             display: none;
-            padding: 20px;
-            background: white;
-            border-radius: 0 10px 10px 10px;
-        }
-
-        .tab-content.active {
-            display: block;
-            animation: fadeInUp 0.5s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .formula-box {
-            background: #2d3748;
-            color: #e2e8f0;
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'Courier New', monospace;
-            margin: 15px 0;
-            border-left: 4px solid #667eea;
-        }
-
-        .formula-box ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .formula-box li {
-            margin: 5px 0;
-        }
-
-        .example-calculation {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 20px;
-            border-radius: 15px;
-            margin: 15px 0;
-        }
-
-        .example-calculation ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .example-calculation li {
-            margin: 5px 0;
-        }
-
-        .info-box ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .info-box li {
-            margin: 5px 0;
-        }
-
-        .warning-box ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .warning-box li {
-            margin: 5px 0;
-        }
-
-        .amortization-preview {
-            max-height: 300px;
-            overflow-y: auto;
-            background: white;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-
-        .amortization-preview table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .amortization-preview th {
-            background: #667eea;
-            color: white;
-            padding: 10px;
-            position: sticky;
-            top: 0;
-        }
-
-        .amortization-preview td {
-            padding: 8px 10px;
-            border-bottom: 1px solid #eee;
-            text-align: right;
-        }
-
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 250px;
         }
 
         @media (max-width: 768px) {
-            .header h1 {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
                 font-size: 2rem;
             }
             
-            .loan-types {
+            .files-grid {
                 grid-template-columns: 1fr;
             }
             
-            .calc-inputs {
-                grid-template-columns: 1fr;
-            }
-
-            .tabs {
-                flex-direction: column;
-            }
-
-            .tab {
-                margin-right: 0;
-                border-radius: 10px;
-                margin-bottom: 5px;
-            }
-
-            .tab-content {
-                border-radius: 10px;
+            .stats {
+                gap: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🏦 Understanding Loans</h1>
-        </div>
-        <div class="section">
-            <h3>
-                A loan in India is <strong>money 💵 💴 💶 💷 borrowed from a bank, NBFC (Non-Banking Financial Company), cooperative society, or even informal lenders</strong>, with the promise to repay in the future through installments (EMI) or lump sum, with interest.
-                <br>
-                <br>
-                <p>
-                Legally, it’s a contract between lender and borrower governed by:
-                <br>
-                <br>
-                <ul>
-                <li>The Indian Contract Act, 1872 (agreement enforceability)</li>
-                <li>RBI guidelines (if lender is a bank/NBFC)</li>
-                <li>SARFAESI Act, 2002 (for recovery of secured loans)</li>
-                </ul>
-            </h3>
-        </div>
+        <h1>📁 Microfinance Executive</h1>
+        <p class="subtitle">Explore your Syllabus</p>
 
-        <!-- Types of Loans -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #081448, #764ba2);">🏠</div>
-                Types of Loans in India
-            </h2>
-            <div class="loan-types">
-                <div class="loan-card" onclick="showLoanDetails('personal')">
-                    <h3>💳 Personal Loan</h3>
-                    <p>Unsecured loans for personal expenses</p>
-                    <p><strong>Interest: 10-24% p.a.</strong></p>
-                </div>
-                <div class="loan-card" onclick="showLoanDetails('home')">
-                    <h3>🏠 Home Loan</h3>
-                    <p>Secured loans for property purchase</p>
-                    <p><strong>Interest: 8.5-9.5% p.a.</strong></p>
-                </div>
-                <div class="loan-card" onclick="showLoanDetails('auto')">
-                    <h3>🚗 Auto Loan</h3>
-                    <p>Secured loans for vehicle purchase</p>
-                    <p><strong>Interest: 7-12% p.a.</strong></p>
-                </div>
-                <div class="loan-card" onclick="showLoanDetails('education')">
-                    <h3>🎓 Education Loan</h3>
-                    <p>Loans for higher education</p>
-                    <p><strong>Interest: 8-15% p.a.</strong></p>
-                </div>
-                <div class="loan-card" onclick="showLoanDetails('business')">
-                    <h3>💼 Business Loan</h3>
-                    <p>Loans for business expansion</p>
-                    <p><strong>Interest: 11-18% p.a.</strong></p>
-                </div>
-                <div class="loan-card" onclick="showLoanDetails('gold')">
-                    <h3>🥇 Gold Loan</h3>
-                    <p>Secured loans against gold</p>
-                    <p><strong>Interest: 7-12% p.a.</strong></p>
-                </div>
-            </div>
-            <div id="loanDetails" class="info-box" style="display: none;">
-                <h3 id="detailTitle"></h3>
-                <br>
-                <h3 id="detailDesc"></h3><br>
-                <h4 id="keyFeature"></h4><br>
-                <p id="detailContent"></p>
-            </div>
-        </div>
-
-        <!-- Loan Terms -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">📊</div>
-                Loan Terms Explained
-            </h2>
-            <div class="tab-container">
-                <div class="tabs">
-                    <button class="tab active" onclick="showTab('principal')">Principal</button>
-                    <button class="tab" onclick="showTab('tenure')">Tenure</button>
-                    <button class="tab" onclick="showTab('interest')">Interest Rate</button>
-                    <button class="tab" onclick="showTab('fees')">Fees & Charges</button>
-                </div>
-                <div id="principal" class="tab-content active">
-                    <h3>Principal Amount</h3>
-                    <p>The original amount borrowed from the lender.</p>
-                    <div class="example-calculation">
-                        <strong>Example:</strong> If you take a home loan of ₹50,00,000, this is your principal amount.
-                        <div class="interactive-demo">
-                            <label>Principal Amount: ₹<span id="principalDisplay">5000000</span></label>
-                            <input type="range" class="slider" min="100000" max="10000000" value="5000000" step="100000" id="principalSlider">
-                        </div>
-                    </div>
-                </div>
-                <div id="tenure" class="tab-content">
-                    <h3>Loan Tenure</h3>
-                    <p>The time period over which you repay the loan, usually in years.</p>
-                    <div class="example-calculation">
-                        <strong>Example:</strong> Home loans typically have tenure of 15-30 years.
-                        <div class="interactive-demo">
-                            <label>Tenure: <span id="tenureDisplay">20</span> years</label>
-                            <input type="range" class="slider" min="1" max="30" value="20" id="tenureSlider">
-                        </div>
-                    </div>
-                </div>
-                <div id="interest" class="tab-content">
-                    <h3>Interest Rate</h3>
-                    <p>The percentage charged by the lender on the outstanding loan amount.</p>
-                    <div class="example-calculation">
-                        <strong>Types in India:</strong>
-                        <ul>
-                            <li><strong>Fixed Rate:</strong> Remains constant throughout the tenure</li>
-                            <li><strong>Floating Rate:</strong> Changes with market conditions (linked to repo rate)</li>
-                            <li><strong>MCLR:</strong> Marginal Cost of Funds based Lending Rate</li>
-                            <li><strong>External Benchmark Rate:</strong> Linked to repo rate, more transparent</li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="fees" class="tab-content">
-                    <h3>Fees & Charges</h3>
-                    <div class="example-calculation">
-                        <strong>Common charges in Indian banks:</strong>
-                        <ul>
-                            <li><strong>Processing Fee:</strong> 0.5-2% of loan amount</li>
-                            <li><strong>Prepayment Charges:</strong> 0-2% for fixed rate loans</li>
-                            <li><strong>Documentation Charges:</strong> ₹2,000-₹10,000</li>
-                            <li><strong>Late Payment Fee:</strong> 2-4% per month</li>
-                            <li><strong>Bounced Cheque Charges:</strong> ₹500-₹1,500</li>
-                        </ul>
-                    </div>
+        <div class="category-section">
+            <h2 class="category-title">📚 Understanding Loans</h2>
+            <div class="files-grid">
+                <div class="file-card" data-file="loans/understanding_loans.html">
+                    <div class="file-icon">📊</div>
+                    <div class="file-title">Loans</div>
+                    <div class="file-description">EA loan is a sum of money that one party (borrower) receives from another party (lender) with the agreement to repay it in the future, usually along with interest.</div>
+                    <div class="file-type">HTML</div>
                 </div>
             </div>
         </div>
 
-        <!-- Secured vs Unsecured -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">🔒</div>
-                Secured vs Unsecured Loans
-            </h2>
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Aspect</th>
-                            <th>Secured Loans</th>
-                            <th>Unsecured Loans</th>
-                        </tr>
-                    </thead>
-                    <tbody> 
-                        <tr>
-                            <td><strong>Definition</strong></td>
-                            <td>A secured loan is a loan that is backed by collateral. Collateral is an asset (like property, vehicle, gold, or fixed deposit) that the lender can seize if the borrower fails to repay the loan.</td>
-                            <td>An unsecured loan is a loan that is not backed by collateral. The lender gives the loan based on the borrower’s creditworthiness, income, and repayment capacity.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Collateral</strong></td>
-                            <td>Required (Property, Vehicle, FD)</td>
-                            <td>Not Required</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Interest Rate</strong></td>
-                            <td>Lower (7-12% p.a.)</td>
-                            <td>Higher (10-24% p.a.)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Loan Amount</strong></td>
-                            <td>Higher (up to 90% of asset value)</td>
-                            <td>Lower (₹50K - ₹40L)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Processing Time</strong></td>
-                            <td>Longer (7-30 days)</td>
-                            <td>Faster (24 hours - 7 days)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Examples</strong></td>
-                            <td>Home Loan, Auto Loan, Gold Loan</td>
-                            <td>Personal Loan, Credit Card</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Risk to Borrower</strong></td>
-                            <td>Asset can be seized</td>
-                            <td>Legal action, credit impact</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Credit Score -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #ff9a56, #ff6b6b);">📈</div>
-                Credit Score & Loan Eligibility (CIBIL, Experian, Equifax, CRIF High Mark)
-            </h2>
-            <p>In India, credit scores range from 300-900. Higher scores mean better loan terms and easier approvals.</p>
-            
-            <div class="interactive-demo">
-                <h3>Interactive Credit Score Meter</h3>
-                <div class="credit-score-meter">
-                    <div class="meter-arc" aria-hidden="true"></div>
-                  
-                    <!-- needle & pivot (kept outside arc so it sits visually above) -->
-                    <div class="meter-needle" id="creditNeedle" aria-hidden="true"></div>
-                    <div class="meter-pivot" aria-hidden="true"></div>
-                  
-                    <div style="text-align:center; margin-top: 12px;">
-                      <label>Your Credit Score: <span id="scoreDisplay" class="highlight">750</span></label>
-                      <input type="range" class="slider" min="300" max="900" value="750" id="creditSlider">
-                    </div>
-                  </div>
-                  </div>
-            </div>
-
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Score Range</th>
-                            <th>Rating</th>
-                            <th>Loan Approval</th>
-                            <th>Interest Rate</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="background: #ff6b6b; color: white;">
-                            <td>300-549</td>
-                            <td>Poor</td>
-                            <td>Very Difficult</td>
-                            <td>Very High (18-24%)</td>
-                        </tr>
-                        <tr style="background: #ffa502; color: white;">
-                            <td>550-649</td>
-                            <td>Fair</td>
-                            <td>Difficult</td>
-                            <td>High (15-20%)</td>
-                        </tr>
-                        <tr style="background: #f1c40f;">
-                            <td>650-749</td>
-                            <td>Good</td>
-                            <td>Moderate</td>
-                            <td>Standard (12-16%)</td>
-                        </tr>
-                        <tr style="background: #2ed573; color: white;">
-                            <td>750-900</td>
-                            <td>Excellent</td>
-                            <td>Easy</td>
-                            <td>Best Rates (8-12%)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="info-box">
-                <h3>💡 How to Improve Credit Score</h3>
-                <ul>
-                    <li><strong>Pay on time:</strong> Never miss EMI or credit card payments</li>
-                    <li><strong>Keep credit utilization low:</strong> Use less than 30% of credit limit</li>
-                    <li><strong>Maintain old accounts:</strong> Longer credit history is better</li>
-                    <li><strong>Mix of credit:</strong> Have both secured and unsecured loans</li>
-                    <li><strong>Monitor regularly:</strong> Check credit report annually</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- EMI Calculator -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">🧮</div>
-                EMI Calculator with Mathematical Formula
-            </h2>
-            <h3>
-                An EMI is a fixed monthly payment that a borrower makes to a lender to repay a loan over a specified period. Each EMI consists of:
-            </h3>
-                <div style="margin-left: 20px;">
-                <ul>
-                    <li>
-                    Principal Component – The portion of the EMI that goes toward repaying the actual loan amount.
-                        </li>
-                        <li>
-                    Interest Component – The portion of the EMI that goes toward paying interest on the outstanding loan.
-                </li>
-                </ul>
-                <div>
-                
-            
-            
-            <div class="formula-box">
-                <h3>EMI Formula:</h3>
-                <p>EMI = [P × R × (1+R)^N] / [(1+R)^N - 1]</p>
-                <p>Where:</p>
-                <ul>
-                    <li>P = Principal Loan Amount</li>
-                    <li>R = Monthly Interest Rate (Annual Rate ÷ 12 ÷ 100)</li>
-                    <li>N = Number of Monthly Installments (Years × 12)</li>
-                </ul>
-            </div>
-            <div class="calculator">
-               <a href="complete_loan_calculator.html" target="_blank"> <h3>🧮 Interactive EMI Calculator</h3> </a>
-            </div>
-
-            <!--div class="calculator">
-                <h3>🧮 Interactive EMI Calculator</h3>
-                <div class="calc-inputs">
-                    <div class="input-group">
-                        <label>Principal Amount (₹)</label>
-                        <input type="number" id="principal" placeholder="5000000" value="5000000">
-                    </div>
-                    <div class="input-group">
-                        <label>Annual Interest Rate (%)</label>
-                        <input type="number" id="interestRate" placeholder="9.5" value="9.5" step="0.1">
-                    </div>
-                    <div class="input-group">
-                        <label>Loan Tenure (Years)</label>
-                        <input type="number" id="tenureYears" placeholder="20" value="20">
-                    </div>
-                </div>
-                <button class="calc-button" onclick="calculateEMI()">Calculate EMI</button>
-                <div class="result" id="emiResult">
-                    Click Calculate to see your EMI
-                </div>
-            </div-->
-
-            <div class="example-calculation">
-                <h3>Step-by-Step Calculation Example:</h3>
-                <p><strong>Loan Details:</strong> ₹50,00,000 at 9.5% for 20 years</p>
-                <p><strong>Step 1:</strong> Monthly Interest Rate (R) = 9.5 ÷ 12 ÷ 100 = 0.00792</p>
-                <p><strong>Step 2:</strong> Number of months (N) = 20 × 12 = 240</p>
-                <p><strong>Step 3:</strong> (1+R)^N = (1.00792)^240 = 6.267</p>
-                <p><strong>Step 4:</strong> EMI = [50,00,000 × 0.00792 × 6.267] ÷ [6.267 - 1] = <span class="highlight">₹46,957</span></p>
-            </div>
-        </div>
-
-        <!-- Prepayment -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">💰</div>
-                Prepayment & Part-payment
-            </h2>
-            <div class="info-box">
-            <h3>Prepayment</h3>
-            <p>Prepayment is when a borrower pays the entire outstanding loan amount before the scheduled tenure ends. It helps reduce the total interest payable and may close the loan earlier than planned.</p>
-            </div>
-
-            <div class="info-box">
-            <h3>Part-Payment</h3>
-            <p>Part-payment is when a borrower pays an extra amount toward the loan principal without closing the loan fully. It reduces the principal, which in turn reduces future interest payments.</p>
-            </div>
-            
-            <div class="info-box">
-                <h3>RBI Guidelines for Prepayment (2022)</h3>
-                <ul>
-                    <li><strong>Floating Rate Loans:</strong> No prepayment penalty</li>
-                    <li><strong>Fixed Rate Loans:</strong> Up to 2% penalty allowed for individuals</li>
-                    <li><strong>Minimum Notice:</strong> Most banks require 30 days notice</li>
-                    <li><strong>Partial Prepayment:</strong> Minimum amount varies by bank (₹25,000-₹1,00,000)</li>
-                </ul>
-            </div>
-
-            <div class="interactive-demo">
-                <h3>Prepayment Impact Calculator</h3>
-                <div>
-                    <label>Original EMI: ₹<span id="origEMI">46957</span></label><br>
-                    <label>Prepayment Amount: ₹<span id="prepayDisplay">500000</span></label>
-                    <input type="range" class="slider" min="50000" max="2000000" value="500000" step="50000" id="prepaySlider">
-                </div>
-                <div class="result" id="prepayResult">
-                    Adjust the slider to see prepayment benefits
-                </div>
-            </div>
-
-            <div class="example-calculation">
-                <h3>Mathematical Impact of Prepayment:</h3>
-                <p><strong>Original Loan:</strong> ₹50L at 9.5% for 20 years = ₹46,957 EMI</p>
-                <p><strong>After ₹5L prepayment in 5th year:</strong></p>
-                <ul>
-                    <li>Remaining Principal: ₹41,23,456</li>
-                    <li>Interest Saved: ₹8,92,341</li>
-                    <li>Tenure Reduced: 3.2 years</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Loan Eligibility -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">✅</div>
-                Loan Eligibility Criteria
-            </h2>
-            
-            <div class="interactive-demo">
-                <h3>Eligibility Calculator</h3>
-                <div class="calc-inputs">
-                    <div class="input-group">
-                        <label>Monthly Income (₹)</label>
-                        <input type="number" id="monthlyIncome" placeholder="80000" value="80000">
-                    </div>
-                    <div class="input-group">
-                        <label>Existing EMIs (₹)</label>
-                        <input type="number" id="existingEMI" placeholder="15000" value="15000">
-                    </div>
-                    <div class="input-group">
-                        <label>Credit Score</label>
-                        <input type="number" id="creditScore" placeholder="750" value="750" min="300" max="900">
-                    </div>
-                </div>
-                <button class="calc-button" onclick="calculateEligibility()">Check Eligibility</button>
-                <div class="result" id="eligibilityResult">
-                    Enter your details to check loan eligibility
-                </div>
-            </div>
-
-            <div class="formula-box">
-                <h3>Debt-to-Income Ratio Formula:</h3>
-                <p>DTI = (Total Monthly EMIs ÷ Monthly Income) × 100</p>
-                <p>Ideal DTI should be below 40% for loan approval</p>
-            </div>
-
-            <div class="info-box">
-                <h3>📋 General Eligibility Criteria</h3>
-                <ul>
-                    <li><strong>Age:</strong> 21-65 years (varies by loan type)</li>
-                    <li><strong>Income:</strong> Minimum ₹25,000/month for personal loans</li>
-                    <li><strong>Employment:</strong> 2+ years work experience</li>
-                    <li><strong>Credit History:</strong> 12+ months of credit activity</li>
-                    <li><strong>Residence:</strong> Current address for 1+ year</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Defaulting Impact -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5253);">⚠️</div>
-                Loan Default: Impacts & Recovery
-            </h2>
-            
-            <div class="warning-box">
-                <h3>🚨 Consequences of Loan Default in India</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
-                    <div>
-                        <strong>Immediate Impact (0-90 days):</strong>
-                        <ul>
-                            <li>Late payment charges</li>
-                            <li>Penalty interest</li>
-                            <li>Credit score drop</li>
-                            <li>Phone calls and notices</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <strong>Serious Default (90+ days):</strong>
-                        <ul>
-                            <li>NPA (Non-Performing Asset) classification</li>
-                            <li>CIBIL score drops to 300-500</li>
-                            <li>Legal action initiated</li>
-                            <li>Account reported to credit bureaus</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <strong>Severe Consequences:</strong>
-                        <ul>
-                            <li>Asset seizure/auction</li>
-                            <li>SARFAESI Act invoked</li>
-                            <li>7-year credit history impact</li>
-                            <li>Difficulty getting future loans</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-box">
-                <h3>💡 Recovery Options</h3>
-                <ul>
-                    <li><strong>Loan Restructuring:</strong> Extend tenure, reduce EMI</li>
-                    <li><strong>One-Time Settlement (OTS):</strong> Negotiate with bank for reduced payment</li>
-                    <li><strong>Debt Consolidation:</strong> Combine multiple loans into one</li>
-                    <li><strong>Asset Sale:</strong> Sell collateral to clear dues</li>
-                    <li><strong>Family Assistance:</strong> Seek help from family members</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Advanced Concepts -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">🎯</div>
-                Advanced Loan Concepts in India
-            </h2>
-            
-            <div class="tab-container">
-                <div class="tabs">
-                    <button class="tab active" onclick="showAdvancedTab('processing')">Processing Fees</button>
-                    <button class="tab" onclick="showAdvancedTab('insurance')">Loan Insurance</button>
-                    <button class="tab" onclick="showAdvancedTab('tax')">Tax Benefits</button>
-                    <button class="tab" onclick="showAdvancedTab('refinance')">Loan Refinancing</button>
-                </div>
-                
-                <div id="processing" class="tab-content active">
-                    <h3>Processing Fees & Charges</h3>
-                    <div class="example-calculation">
-                        <p><strong>Typical Charges in India:</strong></p>
-                        <ul>
-                            <li><strong>Processing Fee:</strong> 0.5-2% of loan amount</li>
-                            <li><strong>Legal Charges:</strong> ₹5,000-₹15,000</li>
-                            <li><strong>Valuation Charges:</strong> ₹2,000-₹5,000</li>
-                            <li><strong>Insurance Premium:</strong> 0.5-0.75% annually</li>
-                            <li><strong>Documentation Fee:</strong> ₹1,000-₹5,000</li>
-                        </ul>
-                        <div class="formula-box">
-                            <p>Total Cost = Principal + Interest + Processing Fee + Other Charges</p>
-                            <p>Example: ₹50L loan with 1% processing fee = ₹50,000 upfront cost</p>
-                        </div>
-                    </div>
+        <div class="category-section">
+            <h2 class="category-title">📚 Interest Rates</h2>
+            <div class="files-grid">
+                <div class="file-card" data-file="interest-rates/01-interest_calculator.html">
+                    <div class="file-icon">📊</div>
+                    <div class="file-title">Interest And Simple vs Compound Interest</div>
+                    <div class="file-description">Cost of borrowing money or the reward for lending money.</div>
+                    <div class="file-type">HTML</div>
                 </div>
 
-                <div id="insurance" class="tab-content">
-                    <h3>Loan Protection Insurance</h3>
-                    <div class="info-box">
-                        <ul>
-                            <li><strong>Term Insurance:</strong> Covers outstanding loan amount in case of borrower's death</li>
-                            <li><strong>Critical Illness Cover:</strong> Pays EMI during illness</li>
-                            <li><strong>Job Loss Protection:</strong> Covers EMI for 6-12 months</li>
-                            <li><strong>Disability Cover:</strong> Covers loan in case of permanent disability</li>
-                        </ul>
-                    </div>
-                    <div class="example-calculation">
-                        <p><strong>Premium Calculation:</strong></p>
-                        <p>For ₹50L loan: Insurance premium = ₹25,000-₹37,500 annually</p>
-                        <p>Monthly addition to EMI = ₹2,083-₹3,125</p>
-                    </div>
-                </div>
-
-                <div id="tax" class="tab-content">
-                    <h3>Tax Benefits on Loans</h3>
-                    <div class="comparison-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Loan Type</th>
-                                    <th>Section</th>
-                                    <th>Deduction Limit</th>
-                                    <th>Component</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Home Loan</td>
-                                    <td>80C</td>
-                                    <td>₹1.5 Lakh</td>
-                                    <td>Principal Repayment</td>
-                                </tr>
-                                <tr>
-                                    <td>Home Loan</td>
-                                    <td>24(b)</td>
-                                    <td>₹2 Lakh</td>
-                                    <td>Interest Payment</td>
-                                </tr>
-                                <tr>
-                                    <td>Education Loan</td>
-                                    <td>80E</td>
-                                    <td>No Limit</td>
-                                    <td>Interest Payment</td>
-                                </tr>
-                                <tr>
-                                    <td>Business Loan</td>
-                                    <td>Business Expense</td>
-                                    <td>No Limit</td>
-                                    <td>Interest as Business Cost</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div id="refinance" class="tab-content">
-                    <h3>Loan Refinancing (Balance Transfer)</h3>
-                    <div class="interactive-demo">
-                        <h3>Refinancing Savings Calculator</h3>
-                        <div>
-                            <label>Current Interest Rate: <span id="currentRateDisplay">10.5</span>%</label>
-                            <input type="range" class="slider" min="8" max="15" value="10.5" step="0.1" id="currentRateSlider">
-                        </div>
-                        <div>
-                            <label>New Interest Rate: <span id="newRateDisplay">9.0</span>%</label>
-                            <input type="range" class="slider" min="7" max="12" value="9.0" step="0.1" id="newRateSlider">
-                        </div>
-                        <div class="result" id="refinanceResult">
-                            Adjust rates to see potential savings
-                        </div>
-                    </div>
-                    <div class="warning-box">
-                        <h3>⚠️ Refinancing Costs to Consider</h3>
-                        <ul>
-                            <li><strong>Processing Fee:</strong> 0.5-1% of loan amount</li>
-                            <li><strong>Legal Charges:</strong> ₹5,000-₹10,000</li>
-                            <li><strong>Prepayment Penalty:</strong> 0-2% of outstanding amount</li>
-                            <li><strong>Documentation:</strong> ₹2,000-₹5,000</li>
-                        </ul>
-                    </div>
+                <div class="file-card" data-file="interest-rates/02-fixed-floating-interest_rates_guide.html">
+                    <div class="file-icon">📊</div>
+                    <div class="file-title">Interest And Fixed vs Floating Interest Rates</div>
+                    <div class="file-description">A fixed interest rate is an interest rate that remains constant. VS A floating interest rate (or variable rate) changes over the loan tenure based on an external benchmark like MCLR (Marginal Cost of Funds based Lending Rate) or Repo Rate</div>
+                    <div class="file-type">HTML</div>
                 </div>
             </div>
         </div>
-
-        <!-- Loan Lifecycle Visualization -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">📈</div>
-                Loan Lifecycle Visualization
-            </h2>
-            
-            <div class="visual-chart" id="loanChart">
-                <h3>Loan Balance Over Time</h3>
-                <div class="chart-container">
-                    <canvas id="chartCanvas" width="800" height="250"></canvas>
-                </div>
-            </div>
-            
-            <div class="interactive-demo">
-                <a href="complete_loan_calculator.html" target="_blank"><h3>Amortization Schedule Preview</h3></a>
-            </div>
-        </div>
-
-        <!-- Digital Lending -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #ff9a56, #ff6b6b);">📱</div>
-                Digital Lending in India (2025)
-            </h2>
-            
-            <div class="loan-types">
-                <div class="loan-card">
-                    <h3>📱 Fintech Lenders</h3>
-                    <p>Instant approval, digital KYC</p>
-                    <p><strong>Examples:</strong> Payme, Lending Kart, Capital Float</p>
-                </div>
-                <div class="loan-card">
-                    <h3>🏦 Bank Digital Platforms</h3>
-                    <p>Pre-approved loans, mobile banking</p>
-                    <p><strong>Examples:</strong> SBI YONO, ICICI iMobile</p>
-                </div>
-                <div class="loan-card">
-                    <h3>🔗 NBFC Partnerships</h3>
-                    <p>Quick disbursals, flexible terms</p>
-                    <p><strong>Examples:</strong> Bajaj Finserv, Tata Capital</p>
-                </div>
-            </div>
-
-            <div class="info-box">
-                <h3>🔒 Digital Lending Guidelines</h3>
-                <ul>
-                    <li><strong>RBI Digital Lending Guidelines 2022:</strong> All digital lenders must follow fair practices</li>
-                    <li><strong>Cooling Period:</strong> 3-day cooling period for digital loans</li>
-                    <li><strong>Data Privacy:</strong> Consent-based data collection only</li>
-                    <li><strong>Grievance Redressal:</strong> Mandatory complaint resolution mechanism</li>
-                    <li><strong>App Store Policy:</strong> Only authorized lending apps allowed</li>
-                </ul>
-            </div>
-
-            <div class="warning-box">
-                <h3>⚠️ Beware of Illegal Lending Apps</h3>
-                <ul>
-                    <li>Check RBI's approved lender list before applying</li>
-                    <li>Avoid apps demanding excessive permissions</li>
-                    <li>Never share OTP or banking passwords</li>
-                    <li>Report illegal recovery practices to cyber crime cell</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Government Schemes -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #2ed573, #1dd1a1);">🏛️</div>
-                Government Loan Schemes in India
-            </h2>
-            
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Scheme</th>
-                            <th>Target Group</th>
-                            <th>Loan Amount</th>
-                            <th>Interest Rate</th>
-                            <th>Key Benefit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>PM Mudra Yojana</strong></td>
-                            <td>Micro Entrepreneurs</td>
-                            <td>₹10 Lakh</td>
-                            <td>8-12%</td>
-                            <td>No Collateral</td>
-                        </tr>
-                        <tr>
-                            <td><strong>PM Awas Yojana</strong></td>
-                            <td>First-time Home Buyers</td>
-                            <td>₹6-12 Lakh subsidy</td>
-                            <td>6.5% effective</td>
-                            <td>Interest Subsidy</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Education Loan Scheme</strong></td>
-                            <td>Students</td>
-                            <td>₹10-20 Lakh</td>
-                            <td>4% (subsidized)</td>
-                            <td>Moratorium Period</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Kisan Credit Card</strong></td>
-                            <td>Farmers</td>
-                            <td>₹3 Lakh</td>
-                            <td>4% (with subsidy)</td>
-                            <td>Crop Insurance</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Stand-Up India</strong></td>
-                            <td>SC/ST/Women Entrepreneurs</td>
-                            <td>₹10L-₹1Cr</td>
-                            <td>Base rate + 3%</td>
-                            <td>Guaranteed Credit</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Legal Framework -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #2d3748, #4a5568);">⚖️</div>
-                Legal Framework & Borrower Rights
-            </h2>
-            
-            <div class="info-box">
-                <h3>📜 Key Acts & Regulations</h3>
-                <ul>
-                    <li><strong>SARFAESI Act 2002:</strong> Asset reconstruction and debt recovery</li>
-                    <li><strong>Insolvency & Bankruptcy Code 2016:</strong> Corporate and individual insolvency</li>
-                    <li><strong>RBI Fair Practices Code:</strong> Transparent lending practices</li>
-                    <li><strong>Banking Ombudsman Scheme:</strong> Free grievance redressal</li>
-                    <li><strong>Consumer Protection Act 2019:</strong> Enhanced consumer rights</li>
-                </ul>
-            </div>
-
-            <div class="warning-box">
-                <h3>🔐 Borrower Rights in India</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
-                    <div>
-                        <strong>Transparency Rights:</strong>
-                        <ul>
-                            <li>Annual Percentage Rate (APR) disclosure</li>
-                            <li>All charges upfront disclosure</li>
-                            <li>Loan agreement in vernacular language</li>
-                            <li>Right to know computation method</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <strong>Privacy Rights:</strong>
-                        <ul>
-                            <li>Data protection and consent</li>
-                            <li>Credit information access</li>
-                            <li>Dispute resolution mechanism</li>
-                            <li>Protection from harassment</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Interest Calculation Methods -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">🔢</div>
-                Interest Calculation Methods
-            </h2>
-            
-            <div class="tab-container">
-                <div class="tabs">
-                    <button class="tab active" onclick="showCalcTab('reducing')">Reducing Balance</button>
-                    <button class="tab" onclick="showCalcTab('flat')">Flat Rate</button>
-                    <button class="tab" onclick="showCalcTab('compound')">Compound Interest</button>
-                </div>
-                
-                <div id="reducing" class="tab-content active">
-                    <h3>Reducing Balance Method (Most Common)</h3>
-                    <div class="formula-box">
-                        <p>Interest = Outstanding Principal × Interest Rate × Time Period</p>
-                        <p>Used in: Home loans, Auto loans, Personal loans</p>
-                    </div>
-                    <div class="example-calculation">
-                        <strong>Example:</strong> ₹10L loan at 12% for 5 years
-                        <p>Year 1 Interest = ₹10,00,000 × 0.12 = ₹1,20,000</p>
-                        <p>After paying principal, Year 2 interest reduces</p>
-                        <p>Total Interest Paid = ₹3,31,748</p>
-                    </div>
-                </div>
-
-                <div id="flat" class="tab-content">
-                    <h3>Flat Rate Method</h3>
-                    <div class="formula-box">
-                        <p>Interest = Principal × Rate × Tenure</p>
-                        <p>Used in: Some personal loans, vehicle financing</p>
-                        <p>Note: Effective rate is nearly double the stated flat rate</p>
-                    </div>
-                    <div class="example-calculation">
-                        <strong>Example:</strong> ₹10L loan at 12% flat for 5 years
-                        <p>Total Interest = ₹10,00,000 × 0.12 × 5 = ₹6,00,000</p>
-                        <p>Effective Rate ≈ 22-24% (much higher than reducing balance)</p>
-                    </div>
-                </div>
-
-                <div id="compound" class="tab-content">
-                    <h3>Compound Interest</h3>
-                    <div class="formula-box">
-                        <p>A = P(1 + r/n)^(nt)</p>
-                        <p>Where: n = compounding frequency per year</p>
-                    </div>
-                    <div class="example-calculation">
-                        <strong>Used in:</strong> Credit cards, overdrafts, some business loans
-                        <p>Daily compounding can significantly increase the total amount</p>
-                        <p>Credit cards in India typically compound daily</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Comprehensive EMI Comparison -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">📊</div>
-                Comprehensive Loan Comparison Tool
-            </h2>
-            
-            <div class="calculator" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                <h3>🔄 Compare Multiple Loan Offers</h3>
-                <div class="calc-inputs">
-                    <div class="input-group">
-                        <label>Loan Amount (₹)</label>
-                        <input type="number" id="compareAmount" value="2500000">
-                    </div>
-                    <div class="input-group">
-                        <label>Bank A Rate (%)</label>
-                        <input type="number" id="bankARate" value="9.5" step="0.1">
-                    </div>
-                    <div class="input-group">
-                        <label>Bank B Rate (%)</label>
-                        <input type="number" id="bankBRate" value="9.0" step="0.1">
-                    </div>
-                    <div class="input-group">
-                        <label>Tenure (Years)</label>
-                        <input type="number" id="compareTenure" value="20">
-                    </div>
-                </div>
-                <button class="calc-button" onclick="compareLenders()">Compare Offers</button>
-                <div class="result" id="comparisonResult">
-                    Compare loan offers from different banks
-                </div>
-            </div>
-        </div>
-
-        <!-- Quick Tips Section -->
-        <div class="section">
-            <h2>
-                <div class="icon" style="background: linear-gradient(135deg, #2ed573, #1dd1a1);">💡</div>
-                Quick Loan Tips for Indian Borrowers
-            </h2>
-            
-            <div class="loan-types">
-                <div class="loan-card" style="background: linear-gradient(135deg, #2ed573, #1dd1a1);">
-                    <h3>📝 Before Applying</h3>
-                    <ul style="text-align: left;">
-                        <li>Check credit score (free once a year)</li>
-                        <li>Compare interest rates from 3-4 banks</li>
-                        <li>Read all terms and conditions</li>
-                        <li>Calculate total cost, not just EMI</li>
-                    </ul>
-                </div>
-                <div class="loan-card" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">
-                    <h3>📋 Documentation</h3>
-                    <ul style="text-align: left;">
-                        <li>Income proof (salary slips, ITR)</li>
-                        <li>Identity proof (Aadhaar, PAN)</li>
-                        <li>Address proof (utility bills)</li>
-                        <li>Bank statements (6 months)</li>
-                    </ul>
-                </div>
-                <div class="loan-card" style="background: linear-gradient(135deg, #ff9a56, #ff6b6b);">
-                    <h3>⚠️ Red Flags</h3>
-                    <ul style="text-align: left;">
-                        <li>Guaranteed approval claims</li>
-                        <li>Upfront fee demands</li>
-                        <li>No credit check required</li>
-                        <li>Pressure to sign immediately</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <script>
-        // Animation delays
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach((section, index) => {
-                section.style.animationDelay = `${index * 0.1}s`;
+        // File card click handlers
+        const fileCards = document.querySelectorAll('.file-card');
+        
+        fileCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const fileName = this.getAttribute('data-file');
+                window.open(fileName, '_blank');
             });
-            
-            updateCreditScore();
-            updatePrepayment();
-            drawLoanChart();
-            updateRefinanceCalculator();
-            updatePrincipalSlider();
-            updateTenureSlider();
         });
 
-        // Loan Details
-        function showLoanDetails(type) {
-            const details = {
-                personal: {
-                    title: "💳 Personal Loan Details",
-                    desc:  "A personal loan is an unsecured loan — meaning you don’t need to pledge collateral like property, gold, or assets. It’s given mainly on the basis of your income, employment stability, and credit score.",
-                    content: "Unsecured loans ranging from ₹50,000 to ₹40 lakhs. No collateral required. Quick processing (24-72 hours). Used for: Medical emergencies, weddings, travel, debt consolidation. Eligibility: Minimum salary ₹25,000/month, credit score 650+. Documents: Income proof, identity proof, bank statements.",
-                    keyFeature: "<ol data-start='453' data-end='1469'><li data-start='453' data-end='676'><p data-start='456' data-end='469'><strong data-start='456' data-end='467'>Purpose</strong></p><ul data-start='473' data-end='676'><li data-start='473' data-end='610'><p data-start='475' data-end='610'>Can be used for <strong data-start='491' data-end='515'>any personal expense</strong>: weddings, medical emergencies, home renovation, education, travel, debt consolidation, etc.</p></li><li data-start='614' data-end='676'><p data-start='616' data-end='676'>No restriction on end-use (unlike a home loan or auto loan).</p></li></ul></li><li data-start='678' data-end='776'><p data-start='681' data-end='698'><strong data-start='681' data-end='696'>Loan Amount</strong></p><ul data-start='702' data-end='776'><li data-start='702' data-end='776'><p data-start='704' data-end='776'>Typically from <strong data-start='719' data-end='746'>₹50,000 up to ₹40 lakhs</strong> (varies by lender &amp; profile).</p></li></ul></li><li data-start='778' data-end='859'><p data-start='781' data-end='793'><strong data-start='781' data-end='791'>Tenure</strong></p><ul data-start='797' data-end='859'><li data-start='797' data-end='859'><p data-start='799' data-end='859'>Usually <strong data-start='807' data-end='823'>1 to 5 years</strong> (some lenders allow up to 7 years).</p></li></ul></li><li data-start='861' data-end='970'><p data-start='864' data-end='884'><strong data-start='864' data-end='882'>Interest Rates</strong></p><ul data-start='888' data-end='970'><li data-start='888' data-end='970'><p data-start='890' data-end='970'>Around <strong data-start='897' data-end='920'>10% – 24% per annum</strong> (depends on credit score, income, and bank/NBFC).</p></li></ul></li><li data-start='972' data-end='1199'><p data-start='975' data-end='992'><strong data-start='975' data-end='990'>Eligibility</strong></p><ul data-start='996' data-end='1199'><li data-start='996' data-end='1017'><p data-start='998' data-end='1017'>Age: 21–60 years.</p></li><li data-start='1021' data-end='1114'><p data-start='1023' data-end='1114'>Stable income (₹25,000–₹30,000 per month minimum for salaried, higher for self-employed).</p></li><li data-start='1118' data-end='1199'><p data-start='1120' data-end='1199'>Good <strong data-start='1125' data-end='1152'>credit score (650–750+)</strong> increases approval chances and lowers rates.</p></li></ul></li><li data-start='1201' data-end='1336'><p data-start='1204' data-end='1219'><strong data-start='1204' data-end='1217'>Repayment</strong></p><ul data-start='1223' data-end='1336'><li data-start='1223' data-end='1280'><p data-start='1225' data-end='1280'>Done through <strong data-start='1238' data-end='1277'>EMIs (Equated Monthly Installments)</strong>.</p></li><li data-start='1284' data-end='1336'><p data-start='1286' data-end='1336'>Prepayment/foreclosure may attract charges (0–4%).</p></li></ul></li><li data-start='1338' data-end='1469'><p data-start='1341' data-end='1357'><strong data-start='1341' data-end='1355'>Collateral</strong></p><ul data-start='1361' data-end='1469'><li data-start='1361' data-end='1417'><p data-start='1363' data-end='1417'>❌ Not required (that’s why it’s called “unsecured”).</p></li><li data-start='1421' data-end='1469'><p data-start='1423' data-end='1469'>Lenders rely on your creditworthiness instead.</p></li></ul></li></ol>"
-                },
-                home: {
-                    title: "🏠 Home Loan Details", 
-                    desc: "A home loan (also called a housing loan) is a type of secured loan provided by banks, housing finance companies (HFCs), or other financial institutions to help individuals purchase, construct, or renovate a residential property. The property itself serves as collateral for the loan.Essentially, it allows a person to buy or build a house now and repay the loan in installments over time, typically with interest.",
-                    keyFeature: "<ol data-start='589' data-end='2528'><li data-start='589' data-end='771'><p data-start='592' data-end='608'><strong data-start='592' data-end='608'>Secured Loan</strong></p><ul data-start='612' data-end='771'><li data-start='612' data-end='667'><p data-start='614' data-end='667'>The loan is backed by the property being purchased.</p></li><li data-start='671' data-end='771'><p data-start='673' data-end='771'>If the borrower defaults, the lender can sell the property to recover the outstanding loan amount.</p></li></ul></li><li data-start='773' data-end='930'><p data-start='776' data-end='791'><strong data-start='776' data-end='791'>Loan Amount</strong></p><ul data-start='795' data-end='930'><li data-start='795' data-end='930'><p data-start='797' data-end='930'>Generally ranges from <strong data-start='819' data-end='833'>50% to 90%</strong> of the property value, depending on the borrower’s creditworthiness and the lender’s policies.</p></li></ul></li><li data-start='932' data-end='1208'><p data-start='935' data-end='952'><strong data-start='935' data-end='952'>Interest Rate</strong></p><ul data-start='956' data-end='1208'><li data-start='956' data-end='1208'><p data-start='958' data-end='1005'>Can be <strong data-start='965' data-end='1002'>fixed, floating, or a combination</strong>:</p><ul data-start='1011' data-end='1208'><li data-start='1011' data-end='1088'><p data-start='1013' data-end='1088'><strong data-start='1013' data-end='1028'>Fixed Rate:</strong> The interest rate remains constant for the entire tenure.</p></li><li data-start='1094' data-end='1208'><p data-start='1096' data-end='1208'><strong data-start='1096' data-end='1114'>Floating Rate:</strong> The rate changes with market fluctuations (usually linked to RBI repo rate or bank’s MCLR).</p></li></ul></li></ul></li><li data-start='1210' data-end='1319'><p data-start='1213' data-end='1233'><strong data-start='1213' data-end='1233'>Repayment Tenure</strong></p><ul data-start='1237' data-end='1319'><li data-start='1237' data-end='1319'><p data-start='1239' data-end='1319'>Typically ranges from <strong data-start='1261' data-end='1278'>5 to 30 years</strong>, allowing flexibility in monthly EMIs.</p></li></ul></li><li data-start='1321' data-end='1517'><p data-start='1324' data-end='1361'><strong data-start='1324' data-end='1361'>EMI (Equated Monthly Installment)</strong></p><ul data-start='1365' data-end='1517'><li data-start='1365' data-end='1451'><p data-start='1367' data-end='1451'>Borrowers repay the loan through <strong data-start='1400' data-end='1408'>EMIs</strong>, which include <strong data-start='1424' data-end='1448'>principal + interest</strong>.</p></li><li data-start='1455' data-end='1517'><p data-start='1457' data-end='1517'>Longer tenure → Lower EMIs but higher total interest paid.</p></li></ul></li><li data-start='1519' data-end='1779'><p data-start='1522' data-end='1538'><strong data-start='1522' data-end='1538'>Tax Benefits</strong></p><ul data-start='1542' data-end='1779'><li data-start='1542' data-end='1646'><p data-start='1544' data-end='1646'>Under <strong data-start='1550' data-end='1565'>Section 80C</strong>: Principal repayment is eligible for tax deduction (up to ₹1.5 lakh per year).</p></li><li data-start='1650' data-end='1779'><p data-start='1652' data-end='1779'>Under <strong data-start='1658' data-end='1675'>Section 24(b)</strong>: Interest on home loan is eligible for deduction (up to ₹2 lakh per year for self-occupied property).</p></li></ul></li><li data-start='1781' data-end='2030'><p data-start='1784' data-end='1795'><strong data-start='1784' data-end='1795'>Purpose</strong></p><ul data-start='1799' data-end='2030'><li data-start='1799' data-end='2030'><p data-start='1801' data-end='1830'>Home loans can be used for:</p><ul data-start='1836' data-end='2030'><li data-start='1836' data-end='1875'><p data-start='1838' data-end='1875'>Purchasing a new house or apartment</p></li><li data-start='1881' data-end='1919'><p data-start='1883' data-end='1919'>Constructing a house on owned land</p></li><li data-start='1925' data-end='1973'><p data-start='1927' data-end='1973'>Renovation or repair of an existing property</p></li><li data-start='1979' data-end='2030'><p data-start='1981' data-end='2030'>Buying a ready-to-move-in house from the market</p></li></ul></li></ul></li><li data-start='2032' data-end='2196'><p data-start='2035' data-end='2050'><strong data-start='2035' data-end='2050'>Eligibility</strong></p><ul data-start='2054' data-end='2196'><li data-start='2054' data-end='2123'><p data-start='2056' data-end='2123'>Age, income, credit score, and repayment capacity are considered.</p></li><li data-start='2127' data-end='2196'><p data-start='2129' data-end='2196'>Salaried individuals, self-employed, and professionals can apply.</p></li></ul></li><li data-start='2198' data-end='2375'><p data-start='2201' data-end='2217'><strong data-start='2201' data-end='2217'>Down Payment</strong></p><ul data-start='2221' data-end='2375'><li data-start='2221' data-end='2328'><p data-start='2223' data-end='2328'>The borrower must pay a portion of the property cost upfront (usually 10-20%), called <strong data-start='2309' data-end='2325'>down payment</strong>.</p></li><li data-start='2332' data-end='2375'><p data-start='2334' data-end='2375'>The rest is financed via the home loan.</p></li></ul></li><li data-start='2377' data-end='2528'><p data-start='2381' data-end='2418'><strong data-start='2381' data-end='2418'>Processing Fees and Other Charges</strong></p><ul data-start='2423' data-end='2528'><li data-start='2423' data-end='2528'><p data-start='2425' data-end='2528'>Banks may charge processing fees, legal fees, valuation fees, and prepayment penalties in some cases.</p></li></ul></li></ol>",
-                    content: "Secured loans up to ₹10 crores for property purchase. Collateral: Property being purchased. Tenure: 15-30 years. Tax benefits under Section 80C and 24(b). Eligibility: 21-65 years, stable income, property papers verification. LTV ratio: Up to 90% in metro cities, 85% in non-metro."
-                },
-                auto: {
-                    title: "🚗 Auto Loan Details",
-                    desc: "A vehicle loan (also called an auto loan or car loan) is a type of secured or unsecured loan provided by banks, NBFCs, or financial institutions to help individuals purchase a new or used vehicle.The vehicle itself usually serves as collateral for the loan. It allows a borrower to buy a car, bike, or commercial vehicle immediately and repay the loan in EMIs over a defined tenure.",
-                    keyFeature: "<ol data-start='615' data-end='2136'><li data-start='615' data-end='754'><p data-start='618' data-end='634'><strong data-start='618' data-end='634'>Secured Loan</strong></p><ul data-start='638' data-end='754'><li data-start='638' data-end='683'><p data-start='640' data-end='683'>The vehicle purchased acts as collateral.</p></li><li data-start='687' data-end='754'><p data-start='689' data-end='754'>If the borrower defaults, the lender can repossess the vehicle.</p></li></ul></li><li data-start='756' data-end='931'><p data-start='759' data-end='774'><strong data-start='759' data-end='774'>Loan Amount</strong></p><ul data-start='778' data-end='931'><li data-start='778' data-end='931'><p data-start='780' data-end='931'>Typically covers <strong data-start='797' data-end='808'>70%–90%</strong> of the vehicle cost for new cars and <strong data-start='846' data-end='859'>up to 80%</strong> for used cars, depending on lender policies and borrower eligibility.</p></li></ul></li><li data-start='933' data-end='1126'><p data-start='936' data-end='953'><strong data-start='936' data-end='953'>Interest Rate</strong></p><ul data-start='957' data-end='1126'><li data-start='957' data-end='1126'><p data-start='959' data-end='990'>Can be <strong data-start='966' data-end='987'>fixed or floating</strong>:</p><ul data-start='996' data-end='1126'><li data-start='996' data-end='1049'><p data-start='998' data-end='1049'><strong data-start='998' data-end='1013'>Fixed Rate:</strong> Remains constant over the tenure.</p></li><li data-start='1055' data-end='1126'><p data-start='1057' data-end='1126'><strong data-start='1057' data-end='1075'>Floating Rate:</strong> Changes according to market trends or base rate.</p></li></ul></li></ul></li><li data-start='1128' data-end='1250'><p data-start='1131' data-end='1151'><strong data-start='1131' data-end='1151'>Repayment Tenure</strong></p><ul data-start='1155' data-end='1250'><li data-start='1155' data-end='1250'><p data-start='1157' data-end='1250'>Usually ranges from <strong data-start='1177' data-end='1193'>1 to 7 years</strong>, depending on the type of vehicle and lender policies.</p></li></ul></li><li data-start='1252' data-end='1486'><p data-start='1255' data-end='1292'><strong data-start='1255' data-end='1292'>EMI (Equated Monthly Installment)</strong></p><ul data-start='1296' data-end='1486'><li data-start='1296' data-end='1367'><p data-start='1298' data-end='1367'>Loan is repaid via monthly EMIs including <strong data-start='1340' data-end='1364'>principal + interest</strong>.</p></li><li data-start='1371' data-end='1486'><p data-start='1373' data-end='1486'>Shorter tenure → Higher EMI but lower total interest. Longer tenure → Lower EMI but more interest paid overall.</p></li></ul></li><li data-start='1488' data-end='1660'><p data-start='1491' data-end='1502'><strong data-start='1491' data-end='1502'>Purpose</strong></p><ul data-start='1506' data-end='1660'><li data-start='1506' data-end='1660'><p data-start='1508' data-end='1537'>Can be used for purchasing:</p><ul data-start='1543' data-end='1660'><li data-start='1543' data-end='1563'><p data-start='1545' data-end='1563'>New or used cars</p></li><li data-start='1569' data-end='1609'><p data-start='1571' data-end='1609'>Two-wheelers (motorcycles, scooters)</p></li><li data-start='1615' data-end='1660'><p data-start='1617' data-end='1660'>Commercial vehicles (trucks, vans, taxis)</p></li></ul></li></ul></li><li data-start='1662' data-end='1824'><p data-start='1665' data-end='1680'><strong data-start='1665' data-end='1680'>Eligibility</strong></p><ul data-start='1684' data-end='1824'><li data-start='1684' data-end='1751'><p data-start='1686' data-end='1751'>Based on <strong data-start='1695' data-end='1748'>age, income, credit score, and repayment capacity</strong>.</p></li><li data-start='1755' data-end='1824'><p data-start='1757' data-end='1824'>Salaried individuals, self-employed, and professionals can apply.</p></li></ul></li><li data-start='1826' data-end='1978'><p data-start='1829' data-end='1845'><strong data-start='1829' data-end='1845'>Down Payment</strong></p><ul data-start='1849' data-end='1978'><li data-start='1849' data-end='1931'><p data-start='1851' data-end='1931'>Borrower must pay a portion of the vehicle price upfront (usually <strong data-start='1917' data-end='1927'>10–30%</strong>).</p></li><li data-start='1935' data-end='1978'><p data-start='1937' data-end='1978'>The rest is financed via the auto loan.</p></li></ul></li><li data-start='1980' data-end='2114'><p data-start='1983' data-end='2020'><strong data-start='1983' data-end='2020'>Processing Fees and Other Charges</strong></p><ul data-start='2024' data-end='2114'><li data-start='2024' data-end='2114'><p data-start='2026' data-end='2114'>Lenders may charge processing fees, insurance, registration, and prepayment penalties.</p></li></ul></li><li data-start='2116' data-end='2136'><p data-start='2120' data-end='2136'><strong data-start='2120' data-end='2136'>Tax Benefits</strong></p></li><ul><li data-start='2140' data-end='2201'><p data-start='2142' data-end='2201'><strong data-start='2142' data-end='2171'>No standard tax deduction</strong> for personal vehicle loans.</p></li><li data-start='2205' data-end='2290'>  <p data-start='2207' data-end='2290'>For vehicles used for business, interest may be deductible as a business expense.</p>  </li></ul></ol>",
-                    content: "Secured loans for new/used vehicles. Loan amount: 80-90% of vehicle value. Tenure: 1-7 years. Lower rates for new cars vs used cars. Processing: 2-7 days. Required: Income proof, vehicle quotation, insurance. Registration in bank's name until loan closure."
-                },
-                education: {
-                    title: "🎓 Education Loan Details",
-                    desc: "An education loan is a financial assistance provided by banks or financial institutions to students to cover higher education expenses. This can include tuition fees, hostel charges, books, exam fees, and other education-related costs.Education loans can be taken for study in India or abroad, and repayment usually starts after completion of the course.",
-                    keyFeature: "<ol data-start='581' data-end='2427'><li data-start='581' data-end='837'><p data-start='584' data-end='613'><strong data-start='584' data-end='613'>Secured or Unsecured Loan</strong></p><ul data-start='617' data-end='837'><li data-start='617' data-end='743'><p data-start='619' data-end='743'><strong data-start='619' data-end='631'>Secured:</strong> Loans above a certain amount may require collateral (like property, fixed deposit, or third-party guarantee).</p></li><li data-start='747' data-end='837'><p data-start='749' data-end='837'><strong data-start='749' data-end='763'>Unsecured:</strong> Smaller loans may not require collateral but have stricter eligibility.</p></li></ul></li><li data-start='839' data-end='972'><p data-start='842' data-end='857'><strong data-start='842' data-end='857'>Loan Amount</strong></p><ul data-start='861' data-end='972'><li data-start='861' data-end='972'><p data-start='863' data-end='972'>Typically ranges from <strong data-start='885' data-end='913'>₹50,000 to several lakhs</strong> depending on course, institution, and study destination.</p></li></ul></li><li data-start='974' data-end='1152'><p data-start='977' data-end='994'><strong data-start='977' data-end='994'>Interest Rate</strong></p><ul data-start='998' data-end='1152'><li data-start='998' data-end='1106'><p data-start='1000' data-end='1106'>Usually ranges from <strong data-start='1020' data-end='1033'>8% to 15%</strong>, depending on the bank and whether it is a government-subsidized loan.</p></li><li data-start='1110' data-end='1152'><p data-start='1112' data-end='1152'>Interest can be <strong data-start='1128' data-end='1149'>fixed or floating</strong>.</p></li></ul></li><li data-start='1154' data-end='1347'><p data-start='1157' data-end='1177'><strong data-start='1157' data-end='1177'>Repayment Tenure</strong></p><ul data-start='1181' data-end='1347'><li data-start='1181' data-end='1223'><p data-start='1183' data-end='1223'>Usually ranges from <strong data-start='1203' data-end='1220'>5 to 15 years</strong>.</p></li><li data-start='1227' data-end='1347'><p data-start='1229' data-end='1347'><strong data-start='1229' data-end='1251'>Moratorium period:</strong> Repayment often starts <strong data-start='1275' data-end='1302'>after course completion</strong>, sometimes with an additional 6–12 months.</p></li></ul></li><li data-start='1349' data-end='1548'><p data-start='1352' data-end='1389'><strong data-start='1352' data-end='1389'>EMI (Equated Monthly Installment)</strong></p><ul data-start='1393' data-end='1548'><li data-start='1393' data-end='1451'><p data-start='1395' data-end='1451'>Monthly installments include <strong data-start='1424' data-end='1448'>principal + interest</strong>.</p></li><li data-start='1455' data-end='1548'><p data-start='1457' data-end='1548'>During moratorium, some banks allow interest to accumulate and be added to the principal.</p></li></ul></li><li data-start='1550' data-end='1772'><p data-start='1553' data-end='1564'><strong data-start='1553' data-end='1564'>Purpose</strong></p><ul data-start='1568' data-end='1772'><li data-start='1568' data-end='1772'><p data-start='1570' data-end='1624'>Covers costs related to higher education, including:</p><ul data-start='1630' data-end='1772'><li data-start='1630' data-end='1655'><p data-start='1632' data-end='1655'>Tuition and exam fees</p></li><li data-start='1661' data-end='1691'><p data-start='1663' data-end='1691'>Hostel and living expenses</p></li><li data-start='1697' data-end='1730'><p data-start='1699' data-end='1730'>Study materials and equipment</p></li><li data-start='1736' data-end='1772'><p data-start='1738' data-end='1772'>Travel costs for studying abroad</p></li></ul></li></ul></li><li data-start='1774' data-end='1984'><p data-start='1777' data-end='1792'><strong data-start='1777' data-end='1792'>Eligibility</strong></p><ul data-start='1796' data-end='1984'><li data-start='1796' data-end='1914'><p data-start='1798' data-end='1914'>Student must have <strong data-start='1816' data-end='1852'>admission to a recognized course</strong> (undergraduate, postgraduate, professional, or vocational).</p></li><li data-start='1918' data-end='1984'><p data-start='1920' data-end='1984'>Co-borrower (usually parent/guardian) required for most banks.</p></li></ul></li><li data-start='1986' data-end='2154'><p data-start='1989' data-end='2012'><strong data-start='1989' data-end='2012'>Collateral/Security</strong></p><ul data-start='2016' data-end='2154'><li data-start='2016' data-end='2065'><p data-start='2018' data-end='2065'>Loans up to <strong data-start='2030' data-end='2043'>₹7.5 lakh</strong>: Usually unsecured.</p></li><li data-start='2069' data-end='2154'><p data-start='2071' data-end='2154'>Loans above <strong data-start='2083' data-end='2096'>₹7.5 lakh</strong>: Collateral required (like property or fixed deposits).</p></li></ul></li><li data-start='2156' data-end='2290'><p data-start='2159' data-end='2175'><strong data-start='2159' data-end='2175'>Tax Benefits</strong></p><ul data-start='2179' data-end='2290'><li data-start='2179' data-end='2290'><p data-start='2181' data-end='2290'>Under <strong data-start='2187' data-end='2202'>Section 80E</strong>, interest paid on education loan is eligible for <strong data-start='2252' data-end='2269'>tax deduction</strong> for up to 8 years.</p></li></ul></li><li data-start='2292' data-end='2427'><p data-start='2296' data-end='2333'><strong data-start='2296' data-end='2333'>Processing Fees and Other Charges</strong></p><ul data-start='2338' data-end='2427'><li data-start='2338' data-end='2427'><p data-start='2340' data-end='2427'>Banks may charge <strong data-start='2357' data-end='2376'>processing fees</strong>, documentation charges, or prepayment penalties.</p></li></ul></li></ol>",
-                    content: "For higher studies in India/abroad. Amount: Up to ₹1.5 crores. Collateral: Required for loans >₹7.5 lakhs. Moratorium period: Course duration + 6 months. Tax benefit: Interest deduction under 80E with no upper limit. Co-applicant usually required."
-                },
-                business: {
-                    title: "💼 Business Loan Details",
-                    desc: "A business loan is a type of financial assistance provided by banks, NBFCs, or financial institutions to help entrepreneurs and companies fund business operations, expansion, or working capital needs.Business loans can be secured (backed by collateral) or unsecured (based on creditworthiness), depending on the amount and lender policies.",
-                    keyFeature: "<ol data-start='546' data-end='2375'><li data-start='546' data-end='772'><p data-start='549' data-end='578'><strong data-start='549' data-end='578'>Secured or Unsecured Loan</strong></p><ul data-start='582' data-end='772'><li data-start='582' data-end='673'><p data-start='584' data-end='673'><strong data-start='584' data-end='596'>Secured:</strong> Requires collateral such as property, machinery, or other business assets.</p></li><li data-start='677' data-end='772'><p data-start='679' data-end='772'><strong data-start='679' data-end='693'>Unsecured:</strong> No collateral needed, but usually smaller amounts and higher interest rates.</p></li></ul></li><li data-start='774' data-end='894'><p data-start='777' data-end='792'><strong data-start='777' data-end='792'>Loan Amount</strong></p><ul data-start='796' data-end='894'><li data-start='796' data-end='894'><p data-start='798' data-end='894'>Depends on business size, turnover, and purpose. Can range from <strong data-start='862' data-end='891'>₹50,000 to several crores</strong>.</p></li></ul></li><li data-start='896' data-end='1061'><p data-start='899' data-end='916'><strong data-start='899' data-end='916'>Interest Rate</strong></p><ul data-start='920' data-end='1061'><li data-start='920' data-end='1061'><p data-start='922' data-end='1061'>Usually ranges from <strong data-start='942' data-end='956'>10% to 20%</strong>, depending on whether the loan is secured or unsecured, the lender, and the business’s credit profile.</p></li></ul></li><li data-start='1063' data-end='1211'><p data-start='1066' data-end='1086'><strong data-start='1066' data-end='1086'>Repayment Tenure</strong></p><ul data-start='1090' data-end='1211'><li data-start='1090' data-end='1211'><p data-start='1092' data-end='1211'>Can range from <strong data-start='1107' data-end='1124'>1 to 10 years</strong>, depending on the type of loan (working capital, term loan, or equipment financing).</p></li></ul></li><li data-start='1213' data-end='1466'><p data-start='1216' data-end='1253'><strong data-start='1216' data-end='1253'>EMI (Equated Monthly Installment)</strong></p><ul data-start='1257' data-end='1466'><li data-start='1257' data-end='1323'><p data-start='1259' data-end='1323'>Repayment is done via EMIs including <strong data-start='1296' data-end='1320'>principal + interest</strong>.</p></li><li data-start='1327' data-end='1466'><p data-start='1329' data-end='1466'>Some loans allow <strong data-start='1346' data-end='1376'>flexible repayment options</strong> like bullet repayment or seasonal repayment for businesses with fluctuating cash flows.</p></li></ul></li><li data-start='1468' data-end='1694'><p data-start='1471' data-end='1482'><strong data-start='1471' data-end='1482'>Purpose</strong></p><ul data-start='1486' data-end='1694'><li data-start='1486' data-end='1694'><p data-start='1488' data-end='1506'>Can be used for:</p><ul data-start='1512' data-end='1694'><li data-start='1512' data-end='1534'><p data-start='1514' data-end='1534'>Business expansion</p></li><li data-start='1540' data-end='1589'><p data-start='1542' data-end='1589'>Purchasing machinery, equipment, or inventory</p></li><li data-start='1595' data-end='1620'><p data-start='1597' data-end='1620'>Working capital needs</p></li><li data-start='1626' data-end='1656'><p data-start='1628' data-end='1656'>Renovation or office setup</p></li><li data-start='1662' data-end='1694'><p data-start='1664' data-end='1694'>Meeting operational expenses</p></li></ul></li></ul></li><li data-start='1696' data-end='1904'><p data-start='1699' data-end='1714'><strong data-start='1699' data-end='1714'>Eligibility</strong></p><ul data-start='1718' data-end='1904'><li data-start='1718' data-end='1809'><p data-start='1720' data-end='1809'>Business must be <strong data-start='1737' data-end='1767'>registered and operational</strong> for a certain period (often 1–3 years).</p></li><li data-start='1813' data-end='1904'><p data-start='1815' data-end='1904'>Lender considers <strong data-start='1832' data-end='1901'>turnover, profitability, credit history, and financial statements</strong>.</p></li></ul></li><li data-start='1906' data-end='2077'><p data-start='1909' data-end='1932'><strong data-start='1909' data-end='1932'>Collateral/Security</strong></p><ul data-start='1936' data-end='2077'><li data-start='1936' data-end='1973'><p data-start='1938' data-end='1973'>Secured loans require collateral.</p></li><li data-start='1977' data-end='2077'><p data-start='1979' data-end='2077'>Unsecured loans are offered based on the business credit score and promoter’s financial profile.</p></li></ul></li><li data-start='2079' data-end='2226'><p data-start='2082' data-end='2098'><strong data-start='2082' data-end='2098'>Tax Benefits</strong></p><ul data-start='2102' data-end='2226'><li data-start='2102' data-end='2226'><p data-start='2104' data-end='2226'>Interest on business loans is <strong data-start='2134' data-end='2176'>fully deductible as a business expense</strong> under Income Tax Act, reducing taxable profits.</p></li></ul></li><li data-start='2228' data-end='2375'><p data-start='2232' data-end='2269'><strong data-start='2232' data-end='2269'>Processing Fees and Other Charges</strong></p><ul data-start='2274' data-end='2375'><li data-start='2274' data-end='2375'><p data-start='2276' data-end='2375'>May include <strong data-start='2288' data-end='2372'>processing fees, documentation charges, prepayment penalties, and valuation fees</strong>.</p></li></ul></li></ol>",
-                    content: "For business expansion, working capital, equipment purchase. Amount: ₹1 lakh to ₹50 crores. Collateral: May be required for large amounts. Tenure: 1-10 years. Eligibility: Business vintage 2+ years, good financial statements, credit score 650+."
-                },
-                gold: {
-                    title: "🥇 Gold Loan Details",
-                    desc: "A gold loan is a secured loan offered against the pledge of gold ornaments or coins. Banks, NBFCs, and gold loan companies provide instant funds to borrowers by accepting physical gold as collateral.Gold loans are popular for their quick processing and minimal documentation, especially for short-term financial needs.",
-                    keyFeature: "<ol data-start='513' data-end='2290'><li data-start='513' data-end='706'><p data-start='516' data-end='532'><strong data-start='516' data-end='532'>Secured Loan</strong></p><ul data-start='536' data-end='706'><li data-start='536' data-end='609'><p data-start='538' data-end='609'>The loan is fully secured by the pledged <strong data-start='579' data-end='606'>gold ornaments or coins</strong>.</p></li><li data-start='613' data-end='706'><p data-start='615' data-end='706'>If the borrower defaults, the lender can <strong data-start='656' data-end='676'>auction the gold</strong> to recover the loan amount.</p></li></ul></li><li data-start='708' data-end='822'><p data-start='711' data-end='726'><strong data-start='711' data-end='726'>Loan Amount</strong></p><ul data-start='730' data-end='822'><li data-start='730' data-end='822'><p data-start='732' data-end='822'>Typically <strong data-start='742' data-end='789'>60%–90% of the current market value of gold</strong>, depending on lender policies.</p></li></ul></li><li data-start='824' data-end='995'><p data-start='827' data-end='844'><strong data-start='827' data-end='844'>Interest Rate</strong></p><ul data-start='848' data-end='995'><li data-start='848' data-end='946'><p data-start='850' data-end='946'>Usually ranges from <strong data-start='870' data-end='893'>8% to 24% per annum</strong>, depending on the loan amount, tenure, and lender.</p></li><li data-start='950' data-end='995'><p data-start='952' data-end='995'>Interest can be <strong data-start='968' data-end='977'>fixed</strong> for the tenure.</p></li></ul></li><li data-start='997' data-end='1203'><p data-start='1000' data-end='1020'><strong data-start='1000' data-end='1020'>Repayment Tenure</strong></p><ul data-start='1024' data-end='1203'><li data-start='1024' data-end='1083'><p data-start='1026' data-end='1083'>Generally <strong data-start='1036' data-end='1061'>3 months to 36 months</strong> (short-term loans).</p></li><li data-start='1087' data-end='1203'><p data-start='1089' data-end='1203'>Some lenders offer <strong data-start='1108' data-end='1138'>flexible repayment options</strong> like monthly interest payment or bullet repayment at maturity.</p></li></ul></li><li data-start='1205' data-end='1404'><p data-start='1208' data-end='1227'><strong data-start='1208' data-end='1227'>EMI / Repayment</strong></p><ul data-start='1231' data-end='1404'><li data-start='1231' data-end='1330'><p data-start='1233' data-end='1330'>Can be repaid via <strong data-start='1251' data-end='1259'>EMIs</strong>, interest-only payments, or full repayment at the end of the tenure.</p></li><li data-start='1334' data-end='1404'><p data-start='1336' data-end='1404'>Flexible options help borrowers manage short-term liquidity needs.</p></li></ul></li><li data-start='1406' data-end='1597'><p data-start='1409' data-end='1420'><strong data-start='1409' data-end='1420'>Purpose</strong></p><ul data-start='1424' data-end='1597'><li data-start='1424' data-end='1597'><p data-start='1426' data-end='1444'>Can be used for:</p><ul data-start='1450' data-end='1597'><li data-start='1450' data-end='1474'><p data-start='1452' data-end='1474'>Personal emergencies</p></li><li data-start='1480' data-end='1500'><p data-start='1482' data-end='1500'>Medical expenses</p></li><li data-start='1506' data-end='1519'><p data-start='1508' data-end='1519'>Education</p></li><li data-start='1525' data-end='1545'><p data-start='1527' data-end='1545'>Business funding</p></li><li data-start='1551' data-end='1597'><p data-start='1553' data-end='1597'>Travel or other short-term financial needs</p></li></ul></li></ul></li><li data-start='1599' data-end='1752'><p data-start='1602' data-end='1617'><strong data-start='1602' data-end='1617'>Eligibility</strong></p><ul data-start='1621' data-end='1752'><li data-start='1621' data-end='1686'><p data-start='1623' data-end='1686'>Any individual or business that <strong data-start='1655' data-end='1683'>owns and can pledge gold</strong>.</p></li><li data-start='1690' data-end='1752'><p data-start='1692' data-end='1752'>Minimal eligibility criteria compared to other loan types.</p></li></ul></li><li data-start='1754' data-end='1906'><p data-start='1757' data-end='1771'><strong data-start='1757' data-end='1771'>Collateral</strong></p><ul data-start='1775' data-end='1906'><li data-start='1775' data-end='1824'><p data-start='1777' data-end='1824'><strong data-start='1777' data-end='1809'>Gold jewelry, coins, or bars</strong> are pledged.</p></li><li data-start='1828' data-end='1906'><p data-start='1830' data-end='1906'>Loan-to-value (LTV) ratio is based on <strong data-start='1868' data-end='1895'>purity and market price</strong> of gold.</p></li></ul></li><li data-start='1908' data-end='2068'><p data-start='1911' data-end='1931'><strong data-start='1911' data-end='1931'>Processing Speed</strong></p><ul data-start='1935' data-end='2068'><li data-start='1935' data-end='1987'><p data-start='1937' data-end='1987'><strong data-start='1937' data-end='1970'>Instant or same-day disbursal</strong> in most cases.</p></li><li data-start='1991' data-end='2068'><p data-start='1993' data-end='2068'>Minimal documentation required (ID proof, address proof, gold valuation).</p></li></ul></li><li data-start='2070' data-end='2172'><p data-start='2074' data-end='2090'><strong data-start='2074' data-end='2090'>Tax Benefits</strong></p><ul data-start='2095' data-end='2172'><li data-start='2095' data-end='2172'><p data-start='2097' data-end='2172'><strong data-start='2097' data-end='2123'>No direct tax benefits</strong> on gold loans, unlike home or education loans.</p></li></ul></li><li data-start='2174' data-end='2290'><p data-start='2178' data-end='2215'><strong data-start='2178' data-end='2215'>Processing Fees and Other Charges</strong></p><ul data-start='2220' data-end='2290'><li data-start='2220' data-end='2290'><p data-start='2222' data-end='2290'>Nominal <strong data-start='2230' data-end='2269'>processing fee or appraisal charges</strong> may be applicable.</p></li></ul></li></ol>",
-                    content: "Loans against gold jewelry/coins. Amount: 75-90% of gold value. Tenure: 6 months to 3 years. Quick processing: 30 minutes to 2 hours. Minimal documentation. Interest calculated on reducing balance. Gold stored in bank locker."
-                }
-            };
-            
-            const detail = details[type];
-            document.getElementById('detailTitle').textContent = detail.title;
-            document.getElementById('detailContent').textContent = detail.content;
-            document.getElementById('detailDesc').textContent = detail.desc;
-            document.getElementById('keyFeature').innerHTML = detail.keyFeature;
-            document.getElementById('loanDetails').style.display = 'block';
-            document.getElementById('loanDetails').scrollIntoView({behavior: 'smooth'});
-        }
-
-        // Tab Navigation
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
+        // Add hover effects
+        fileCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
             });
             
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        function showAdvancedTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
             });
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        function showCalcTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        // Principal slider functionality
-        function updatePrincipalSlider() {
-            const slider = document.getElementById('principalSlider');
-            const display = document.getElementById('principalDisplay');
-            
-            if (slider && display) {
-                slider.addEventListener('input', function() {
-                    const amount = this.value;
-                    display.textContent = parseInt(amount).toLocaleString('en-IN');
-                });
-            }
-        }
-
-        // Tenure slider functionality
-        function updateTenureSlider() {
-            const slider = document.getElementById('tenureSlider');
-            const display = document.getElementById('tenureDisplay');
-            
-            if (slider && display) {
-                slider.addEventListener('input', function() {
-                    display.textContent = this.value;
-                });
-            }
-        }
-
-        // EMI Calculation
-        function calculateEMI() {
-            const principal = parseFloat(document.getElementById('principal').value);
-            const annualRate = parseFloat(document.getElementById('interestRate').value);
-            const tenure = parseFloat(document.getElementById('tenureYears').value);
-            
-            if (isNaN(principal) || isNaN(annualRate) || isNaN(tenure) || 
-                principal <= 0 || annualRate <= 0 || tenure <= 0) {
-                document.getElementById('emiResult').innerHTML = `
-                    <div style="text-align: center; color: #ff6b6b;">
-                        <h3>⚠️ Please enter valid values</h3>
-                        <p>All fields must be positive numbers</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            const monthlyRate = annualRate / 12 / 100;
-            const months = tenure * 12;
-            
-            const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / 
-                       (Math.pow(1 + monthlyRate, months) - 1);
-            
-            const totalAmount = emi * months;
-            const totalInterest = totalAmount - principal;
-            
-            document.getElementById('emiResult').innerHTML = `
-                <div style="text-align: center;">
-                    <h3>💰 Your EMI: ₹${emi.toLocaleString('en-IN', {maximumFractionDigits: 0})}</h3>
-                    <p>Total Amount: ₹${totalAmount.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                    <p>Total Interest: ₹${totalInterest.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                    <p>Interest vs Principal: ${((totalInterest/principal)*100).toFixed(1)}%</p>
-                </div>
-            `;
-            
-            generateAmortizationTable(principal, monthlyRate, months, emi);
-        }
-
-        // Generate Amortization Table
-        function generateAmortizationTable(principal, monthlyRate, months, emi) {
-            let balance = principal;
-            let tableHTML = `
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Month</th>
-                            <th>EMI</th>
-                            <th>Interest</th>
-                            <th>Principal</th>
-                            <th>Balance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            `;
-            
-            // Show first 12 months and last 12 months
-            for (let month = 1; month <= Math.min(12, months); month++) {
-                const interestPortion = balance * monthlyRate;
-                const principalPortion = emi - interestPortion;
-                balance -= principalPortion;
-                
-                tableHTML += `
-                    <tr>
-                        <td>${month}</td>
-                        <td>₹${emi.toLocaleString('en-IN', {maximumFractionDigits: 0})}</td>
-                        <td>₹${interestPortion.toLocaleString('en-IN', {maximumFractionDigits: 0})}</td>
-                        <td>₹${principalPortion.toLocaleString('en-IN', {maximumFractionDigits: 0})}</td>
-                        <td>₹${balance.toLocaleString('en-IN', {maximumFractionDigits: 0})}</td>
-                    </tr>
-                `;
-            }
-            
-            if (months > 24) {
-                tableHTML += `<tr><td colspan="5" style="text-align: center; font-style: italic;">... (showing first 12 months) ...</td></tr>`;
-            }
-            
-            tableHTML += `</tbody></table>`;
-            document.getElementById('amortizationTable').innerHTML = tableHTML;
-        }
-
-        // Credit Score Meter
-        // Credit Score Meter
-        function updateCreditScore() {
-  const slider = document.getElementById('creditSlider');
-  const display = document.getElementById('scoreDisplay');
-  const needle = document.getElementById('creditNeedle');
-
-  if (!(slider && display && needle)) return;
-
-  const setScore = (raw) => {
-    const score = Math.max(300, Math.min(900, Number(raw)));
-    display.textContent = score;
-
-    // Map 300–900 -> -90° .. +90°  (300=left, 600=up, 900=right)
-    const rotation = ((score - 300) / 600) * 180 - 90;
-    needle.style.transform = `translateX(-50%) rotate(${rotation}deg)`;
-
-    // Color mapping (match the arc)
-    let color = '#ff6b6b';         // Poor
-    if (score >= 550 && score < 650) color = '#ffa502';
-    else if (score >= 650 && score < 750) color = '#f1c40f';
-    else if (score >= 750) color = '#2ed573';
-
-    needle.style.background = color;
-    display.style.color = color;
-  };
-
-  // Initialize and attach event
-  setScore(slider.value);
-  slider.addEventListener('input', (e) => setScore(e.target.value));
-}
-
-
-        // Eligibility Calculator
-        function calculateEligibility() {
-            const income = parseFloat(document.getElementById('monthlyIncome').value);
-            const existingEMI = parseFloat(document.getElementById('existingEMI').value);
-            const creditScore = parseFloat(document.getElementById('creditScore').value);
-            
-            if (isNaN(income) || isNaN(existingEMI) || isNaN(creditScore)) {
-                document.getElementById('eligibilityResult').innerHTML = `
-                    <div style="text-align: center; color: #ff6b6b;">
-                        <h3>⚠️ Please enter valid values</h3>
-                    </div>
-                `;
-                return;
-            }
-            
-            const dti = (existingEMI / income) * 100;
-            const maxEMI = income * 0.5; // 50% of income
-            const availableEMI = Math.max(0, maxEMI - existingEMI);
-            
-            // Loan amount estimation (assuming 9% rate, 20 years)
-            const monthlyRate = 0.09 / 12;
-            const months = 20 * 12;
-            const maxLoanAmount = availableEMI > 0 ? 
-                (availableEMI * (Math.pow(1 + monthlyRate, months) - 1)) / 
-                (monthlyRate * Math.pow(1 + monthlyRate, months)) : 0;
-            
-            let eligibility;
-            let eligibilityColor;
-            if (creditScore >= 750 && dti < 30) {
-                eligibility = "Excellent";
-                eligibilityColor = "#2ed573";
-            } else if (creditScore >= 650 && dti < 40) {
-                eligibility = "Good";
-                eligibilityColor = "#f1c40f";
-            } else if (creditScore >= 550 && dti < 50) {
-                eligibility = "Fair";
-                eligibilityColor = "#ffa502";
-            } else {
-                eligibility = "Poor";
-                eligibilityColor = "#ff4757";
-            }
-            
-            document.getElementById('eligibilityResult').innerHTML = `
-                <div style="text-align: center;">
-                    <h3 style="color: ${eligibilityColor};">Eligibility: ${eligibility}</h3>
-                    <p>Current DTI: ${dti.toFixed(1)}%</p>
-                    <p>Max EMI Capacity: ₹${availableEMI.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                    <p>Estimated Loan Amount: ₹${maxLoanAmount.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                </div>
-            `;
-        }
-
-        // Prepayment Calculator
-        function updatePrepayment() {
-            const slider = document.getElementById('prepaySlider');
-            const display = document.getElementById('prepayDisplay');
-            
-            if (slider && display) {
-                slider.addEventListener('input', function() {
-                    const prepayAmount = parseFloat(this.value);
-                    display.textContent = prepayAmount.toLocaleString('en-IN');
-                    
-                    // Calculate impact
-                    const originalPrincipal = 5000000;
-                    const rate = 0.095 / 12;
-                    const originalMonths = 20 * 12;
-                    const originalEMI = 46957;
-                    
-                    // Assume prepayment after 5 years (60 EMIs paid)
-                    let remainingPrincipal = originalPrincipal;
-                    for(let i = 0; i < 60; i++) {
-                        const interestPortion = remainingPrincipal * rate;
-                        const principalPortion = originalEMI - interestPortion;
-                        remainingPrincipal -= principalPortion;
-                    }
-                    
-                    const newPrincipal = Math.max(0, remainingPrincipal - prepayAmount);
-                    const remainingMonths = originalMonths - 60;
-                    
-                    if (newPrincipal <= 0) {
-                        document.getElementById('prepayResult').innerHTML = `
-                            <div style="text-align: center;">
-                                <h3>🎉 Loan Fully Paid!</h3>
-                                <p>Your prepayment amount covers the entire remaining loan</p>
-                                <p>Total Interest Saved: ₹${(remainingPrincipal * rate * remainingMonths).toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                            </div>
-                        `;
-                        return;
-                    }
-                    
-                    // Calculate new EMI
-                    const newEMI = (newPrincipal * rate * Math.pow(1 + rate, remainingMonths)) / 
-                                  (Math.pow(1 + rate, remainingMonths) - 1);
-                    
-                    const originalRemainingInterest = (originalEMI * remainingMonths) - remainingPrincipal;
-                    const newRemainingInterest = (newEMI * remainingMonths) - newPrincipal;
-                    const interestSaved = originalRemainingInterest - newRemainingInterest;
-                    
-                    document.getElementById('prepayResult').innerHTML = `
-                        <div style="text-align: center;">
-                            <h3>Prepayment Impact</h3>
-                            <p>New EMI: ₹${newEMI.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                            <p>Interest Saved: ₹${interestSaved.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                            <p>Effective Return: ${((interestSaved/prepayAmount)*100).toFixed(1)}%</p>
-                        </div>
-                    `;
-                });
-            }
-        }
-
-        // Refinance Calculator
-        function updateRefinanceCalculator() {
-            const currentSlider = document.getElementById('currentRateSlider');
-            const newSlider = document.getElementById('newRateSlider');
-            const currentDisplay = document.getElementById('currentRateDisplay');
-            const newDisplay = document.getElementById('newRateDisplay');
-            
-            function updateRefinance() {
-                const currentRate = parseFloat(currentSlider.value);
-                const newRate = parseFloat(newSlider.value);
-                currentDisplay.textContent = currentRate.toFixed(1);
-                newDisplay.textContent = newRate.toFixed(1);
-                
-                const principal = 3000000; // Remaining principal
-                const months = 180; // 15 years remaining
-                
-                const currentMonthlyRate = currentRate / 12 / 100;
-                const newMonthlyRate = newRate / 12 / 100;
-                
-                const currentEMI = (principal * currentMonthlyRate * Math.pow(1 + currentMonthlyRate, months)) / 
-                                  (Math.pow(1 + currentMonthlyRate, months) - 1);
-                
-                const newEMI = (principal * newMonthlyRate * Math.pow(1 + newMonthlyRate, months)) / 
-                              (Math.pow(1 + newMonthlyRate, months) - 1);
-                
-                const monthlySavings = currentEMI - newEMI;
-                const totalSavings = monthlySavings * months;
-                
-                // Assume refinancing costs
-                const refinancingCost = principal * 0.005; // 0.5% of outstanding amount
-                
-                document.getElementById('refinanceResult').innerHTML = `
-                    <div style="text-align: center;">
-                        <h3>Refinancing Benefits</h3>
-                        <p>Current EMI: ₹${currentEMI.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                        <p>New EMI: ₹${newEMI.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                        <p>Monthly Savings: ₹${monthlySavings.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                        <p>Total Savings: ₹${totalSavings.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                        <p>Refinancing Cost: ₹${refinancingCost.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                        <p style="color: ${totalSavings > refinancingCost ? '#2ed573' : '#ff6b6b'};">
-                            Net Benefit: ₹${(totalSavings - refinancingCost).toLocaleString('en-IN', {maximumFractionDigits: 0})}
-                        </p>
-                    </div>
-                `;
-            }
-            
-            if (currentSlider && newSlider) {
-                currentSlider.addEventListener('input', updateRefinance);
-                newSlider.addEventListener('input', updateRefinance);
-                updateRefinance(); // Initial calculation
-            }
-        }
-
-        // Loan Comparison
-        function compareLenders() {
-            const amount = parseFloat(document.getElementById('compareAmount').value);
-            const rateA = parseFloat(document.getElementById('bankARate').value);
-            const rateB = parseFloat(document.getElementById('bankBRate').value);
-            const tenure = parseFloat(document.getElementById('compareTenure').value);
-            
-            if (isNaN(amount) || isNaN(rateA) || isNaN(rateB) || isNaN(tenure) ||
-                amount <= 0 || rateA <= 0 || rateB <= 0 || tenure <= 0) {
-                document.getElementById('comparisonResult').innerHTML = `
-                    <div style="text-align: center; color: #ff6b6b;">
-                        <h3>⚠️ Please enter valid values</h3>
-                        <p>All fields must be positive numbers</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            const monthlyRateA = rateA / 12 / 100;
-            const monthlyRateB = rateB / 12 / 100;
-            const months = tenure * 12;
-            
-            const emiA = (amount * monthlyRateA * Math.pow(1 + monthlyRateA, months)) / 
-                        (Math.pow(1 + monthlyRateA, months) - 1);
-            
-            const emiB = (amount * monthlyRateB * Math.pow(1 + monthlyRateB, months)) / 
-                        (Math.pow(1 + monthlyRateB, months) - 1);
-            
-            const totalA = emiA * months;
-            const totalB = emiB * months;
-            const savings = Math.abs(totalA - totalB);
-            
-            const winner = emiA < emiB ? 'Bank A' : 'Bank B';
-            const winnerColor = emiA < emiB ? '#2ed573' : '#74b9ff';
-            
-            document.getElementById('comparisonResult').innerHTML = `
-                <div style="text-align: center;">
-                    <h3 style="color: ${winnerColor};">🏆 Winner: ${winner}</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
-                            <h4>Bank A (${rateA}%)</h4>
-                            <p>EMI: ₹${emiA.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                            <p>Total: ₹${totalA.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
-                            <h4>Bank B (${rateB}%)</h4>
-                            <p>EMI: ₹${emiB.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                            <p>Total: ₹${totalB.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
-                        </div>
-                    </div>
-                    <p style="margin-top: 15px; font-size: 1.1rem;">
-                        <strong>Total Savings: ₹${savings.toLocaleString('en-IN', {maximumFractionDigits: 0})}</strong>
-                    </p>
-                </div>
-            `;
-        }
-
-        // Draw Loan Chart
-        function drawLoanChart() {
-            const canvas = document.getElementById('chartCanvas');
-            if (!canvas) return;
-            
-            const ctx = canvas.getContext('2d');
-            const width = canvas.width;
-            const height = canvas.height;
-            
-            // Clear canvas
-            ctx.clearRect(0, 0, width, height);
-            
-            // Sample loan data for visualization
-            const principal = 5000000;
-            const rate = 0.095 / 12;
-            const months = 240;
-            const emi = 46957;
-            
-            let balance = principal;
-            const data = [];
-            
-            for (let month = 0; month <= months; month += 12) { // Yearly data points
-                data.push({
-                    month: month,
-                    balance: balance,
-                    year: Math.floor(month / 12)
-                });
-                
-                // Calculate balance after 12 months
-                for (let i = 0; i < 12 && month + i < months; i++) {
-                    const interestPortion = balance * rate;
-                    const principalPortion = emi - interestPortion;
-                    balance = Math.max(0, balance - principalPortion);
-                }
-            }
-            
-            // Drawing the chart
-            const margin = 40;
-            const chartWidth = width - 2 * margin;
-            const chartHeight = height - 2 * margin;
-            
-            // Draw axes
-            ctx.strokeStyle = '#333';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(margin, margin);
-            ctx.lineTo(margin, height - margin);
-            ctx.lineTo(width - margin, height - margin);
-            ctx.stroke();
-            
-            // Draw loan balance curve
-            ctx.strokeStyle = '#667eea';
-            ctx.lineWidth = 3;
-            ctx.beginPath();
-            
-            data.forEach((point, index) => {
-                const x = margin + (point.month / months) * chartWidth;
-                const y = height - margin - (point.balance / principal) * chartHeight;
-                
-                if (index === 0) {
-                    ctx.moveTo(x, y);
-                } else {
-                    ctx.lineTo(x, y);
-                }
-            });
-            
-            ctx.stroke();
-            
-            // Add labels
-            ctx.fillStyle = '#333';
-            ctx.font = '12px Arial';
-            ctx.fillText('Loan Balance (₹)', 10, 20);
-            ctx.fillText('Years', width - 50, height - 10);
-            
-            // Add some data points
-            ctx.fillStyle = '#667eea';
-            data.forEach((point, index) => {
-                if (index % 2 === 0) { // Every other year
-                    const x = margin + (point.month / months) * chartWidth;
-                    const y = height - margin - (point.balance / principal) * chartHeight;
-                    
-                    ctx.beginPath();
-                    ctx.arc(x, y, 4, 0, 2 * Math.PI);
-                    ctx.fill();
-                    
-                    // Add year labels
-                    ctx.fillStyle = '#666';
-                    ctx.fillText(point.year.toString(), x - 5, height - margin + 15);
-                    ctx.fillStyle = '#667eea';
-                }
-            });
-        }
+        });
     </script>
 </body>
 </html>
