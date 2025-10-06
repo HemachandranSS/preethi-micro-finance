@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Rates & Savings in India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.6s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .interactive-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .slider-container {
+            position: relative;
+            z-index: 1;
+            margin: 20px 0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #ddd;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+            transition: transform 0.2s;
+        }
+
+        .slider::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .rate-display {
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            color: #667eea;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: numberPulse 0.3s ease;
+        }
+
+        @keyframes numberPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 300px;
+            margin-top: 20px;
+            padding: 20px;
+            border-left: 2px solid #ddd;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .bar {
+            width: 80px;
+            background: linear-gradient(to top, #667eea, #764ba2);
+            border-radius: 10px 10px 0 0;
+            transition: all 0.5s ease;
+            position: relative;
+            cursor: pointer;
+            animation: growUp 1s ease-out;
+        }
+
+        @keyframes growUp {
+            from {
+                height: 0;
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .bar:hover {
+            filter: brightness(1.2);
+            transform: scaleY(1.05);
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9em;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .toggle-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .toggle-btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .toggle-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        .toggle-btn.active {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            transform: scale(1.05);
+        }
+
+        .scenario {
+            display: none;
+            animation: fadeInScale 0.5s ease;
+        }
+
+        .scenario.active {
+            display: block;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .impact-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #f93;
+            animation: slideInLeft 0.6s ease;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin: 30px 0;
+            position: relative;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.05);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #667eea;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .floating-emoji {
+            position: fixed;
+            font-size: 3em;
+            animation: float 3s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .subtitle { font-size: 1em; }
+            .section { padding: 20px; }
+            .timeline::before { left: 20px; }
+            .timeline-item { flex-direction: column !important; }
+            .timeline-content { width: 100%; margin-left: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Loan Interest Rates & Savings in India 🇮🇳</h1>
+            <p class="subtitle">An Interactive Guide to Understanding Economic Dynamics</p>
+        </header>
+
+        <div class="section">
+            <h2>🎯 The Core Relationship</h2>
+            <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 30px;">
+                Interest rates set by the Reserve Bank of India (RBI) act as a financial thermostat, 
+                regulating the temperature of our economy by influencing how households decide between 
+                spending, saving, and borrowing.
+            </p>
+            
+            <div class="interactive-box">
+                <h3 style="text-align: center; margin-bottom: 20px; position: relative; z-index: 1;">
+                    🎚️ Adjust the Interest Rate
+                </h3>
+                <div class="slider-container">
+                    <input type="range" min="3" max="10" value="6.5" step="0.1" class="slider" id="rateSlider">
+                    <div class="rate-display" id="rateDisplay">6.5%</div>
+                </div>
+                
+                <div class="comparison-grid" id="scenarioCards">
+                    <div class="card" id="savingCard">
+                        <div class="card-icon">🏦</div>
+                        <h3>Saving Behavior</h3>
+                        <p id="savingText">Moderate saving appetite</p>
+                    </div>
+                    <div class="card" id="borrowingCard">
+                        <div class="card-icon">💳</div>
+                        <h3>Borrowing Behavior</h3>
+                        <p id="borrowingText">Balanced borrowing</p>
+                    </div>
+                    <div class="card" id="economyCard">
+                        <div class="card-icon">📈</div>
+                        <h3>Economic Impact</h3>
+                        <p id="economyText">Stable growth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Historical RBI Repo Rate Impact</h2>
+            <div class="chart-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 20px;">
+                    Year-wise Repo Rate Trends
+                </h3>
+                <div class="bar-chart" id="barChart">
+                    <div class="bar" style="height: 65%;">
+                        <span class="bar-value">6.5%</span>
+                        <span class="bar-label">2018-19</span>
+                    </div>
+                    <div class="bar" style="height: 40%;">
+                        <span class="bar-value">4.0%</span>
+                        <span class="bar-label">2020-21</span>
+                    </div>
+                    <div class="bar" style="height: 65%;">
+                        <span class="bar-value">6.5%</span>
+                        <span class="bar-label">2022-23</span>
+                    </div>
+                    <div class="bar" style="height: 63%;">
+                        <span class="bar-value">6.3%</span>
+                        <span class="bar-label">2024-25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔄 Scenario Explorer</h2>
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" onclick="showScenario('high')">📈 High Interest Rates</button>
+                <button class="toggle-btn" onclick="showScenario('low')">📉 Low Interest Rates</button>
+            </div>
+
+            <div id="highRates" class="scenario active">
+                <div class="impact-box">
+                    <h3 style="margin-bottom: 15px;">🔺 When Interest Rates Rise (7%+)</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>✅ Fixed deposits become attractive (higher returns)</li>
+                        <li>✅ Home loan EMIs increase, discouraging borrowing</li>
+                        <li>✅ Savings account returns improve</li>
+                        <li>⚠️ Consumer spending decreases</li>
+                        <li>⚠️ Economic growth may slow down</li>
+                        <li>✅ Inflation gets controlled</li>
+                    </ul>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">↑ 35%</span>
+                        <span class="stat-label">FD Inflows</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">↓ 25%</span>
+                        <span class="stat-label">Loan Uptake</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">7.2%</span>
+                        <span class="stat-label">Average FD Rate</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">↑ 18%</span>
+                        <span class="stat-label">Savings Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lowRates" class="scenario">
+                <div class="impact-box" style="background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);">
+                    <h3 style="margin-bottom: 15px;">🔻 When Interest Rates Fall (4-5%)</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>✅ Home loans become cheaper and more attractive</li>
+                        <li>✅ Business expansion accelerates</li>
+                        <li>✅ Stock market and mutual funds see higher inflows</li>
+                        <li>⚠️ Bank deposit returns decrease</li>
+                        <li>✅ Consumer spending increases</li>
+                        <li>✅ GDP growth accelerates</li>
+                        <li>⚠️ Inflation risk increases</li>
+                    </ul>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">↑ 45%</span>
+                        <span class="stat-label">Home Loans</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">↑ 60%</span>
+                        <span class="stat-label">SIP Inflows</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">4.5%</span>
+                        <span class="stat-label">Average FD Rate</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">↓ 22%</span>
+                        <span class="stat-label">Savings Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📅 Timeline: Evolution of Indian Savings Behavior</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: #667eea;">1990s-2000s</h3>
+                        <p><strong>The Golden Era of Bank Deposits</strong></p>
+                        <p>High FD rates (8-11%), strong preference for safe instruments, 
+                        gold investments dominated, risk-averse mentality.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: #667eea;">2010-2015</h3>
+                        <p><strong>Transition Phase</strong></p>
+                        <p>Introduction of SIP culture, growing awareness of equity markets, 
+                        real estate boom, gradual shift from savings to investments.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: #667eea;">2016-2020</h3>
+                        <p><strong>Digital Revolution</strong></p>
+                        <p>Demonetization impact, digital payments explosion, 
+                        easier access to mutual funds, fintech disruption.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: #667eea;">2020-Present</h3>
+                        <p><strong>New Age Investors</strong></p>
+                        <p>Pandemic-driven equity boom, crypto curiosity, 
+                        younger generation debt-tolerant, returns prioritized over safety.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 Key Insights for Indian Households</h2>
+            <div class="comparison-grid">
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Middle Class</h3>
+                    <p>Most sensitive to rate changes. Prefer FDs during high rates, 
+                    shift to mutual funds during low rates.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👴</div>
+                    <h3>Retirees</h3>
+                    <p>Depend heavily on fixed income. Rising rates significantly 
+                    improve their monthly income.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Young Professionals</h3>
+                    <p>More risk-tolerant. Take advantage of low rates for 
+                    home loans and startup investments.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Businesses</h3>
+                    <p>Low rates encourage expansion and hiring. 
+                    High rates force cost-cutting and efficiency.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 The Bottom Line</h2>
+            <div class="impact-box" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-left-color: #fa709a;">
+                <h3 style="margin-bottom: 20px; font-size: 1.5em;">The Interest Rate Equation</h3>
+                <p style="font-size: 1.2em; line-height: 2;">
+                    <strong>High Rates:</strong> Saving ↑ | Borrowing ↓ | Consumption ↓ | Inflation ↓<br>
+                    <strong>Low Rates:</strong> Saving ↓ | Borrowing ↑ | Consumption ↑ | Growth ↑<br><br>
+                    The RBI uses this powerful lever to balance India's economic growth with 
+                    price stability, directly impacting where 140 crore Indians park their hard-earned money.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slider = document.getElementById('rateSlider');
+        const rateDisplay = document.getElementById('rateDisplay');
+        const savingText = document.getElementById('savingText');
+        const borrowingText = document.getElementById('borrowingText');
+        const economyText = document.getElementById('economyText');
+        const savingCard = document.getElementById('savingCard');
+        const borrowingCard = document.getElementById('borrowingCard');
+        const economyCard = document.getElementById('economyCard');
+
+        slider.addEventListener('input', function() {
+            const rate = parseFloat(this.value);
+            rateDisplay.textContent = rate.toFixed(1) + '%';
+            rateDisplay.style.animation = 'none';
+            setTimeout(() => rateDisplay.style.animation = 'numberPulse 0.3s ease', 10);
+
+            if (rate <= 4.5) {
+                savingText.textContent = '📉 Low - People prefer investments';
+                borrowingText.textContent = '📈 Very High - Cheap loans attract borrowers';
+                economyText.textContent = '🚀 High Growth + Inflation Risk';
+                savingCard.style.background = 'linear-gradient(135deg, #ff9a9e, #fad0c4)';
+                borrowingCard.style.background = 'linear-gradient(135deg, #a8edea, #fed6e3)';
+                economyCard.style.background = 'linear-gradient(135deg, #ffecd2, #fcb69f)';
+            } else if (rate <= 6) {
+                savingText.textContent = '📊 Moderate - Balanced approach';
+                borrowingText.textContent = '📊 Moderate - Reasonable loan rates';
+                economyText.textContent = '⚖️ Balanced Growth';
+                savingCard.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+                borrowingCard.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+                economyCard.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+            } else {
+                savingText.textContent = '📈 High - FDs and RDs very attractive';
+                borrowingText.textContent = '📉 Low - Expensive EMIs deter loans';
+                economyText.textContent = '❄️ Cooling Economy + Lower Inflation';
+                savingCard.style.background = 'linear-gradient(135deg, #a8edea, #fed6e3)';
+                borrowingCard.style.background = 'linear-gradient(135deg, #ff9a9e, #fad0c4)';
+                economyCard.style.background = 'linear-gradient(135deg, #ffecd2, #fcb69f)';
+            }
+        });
+
+        function showScenario(scenario) {
+            document.querySelectorAll('.scenario').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+            
+            if (scenario === 'high') {
+                document.getElementById('highRates').classList.add('active');
+                event.target.classList.add('active');
+            } else {
+                document.getElementById('lowRates').classList.add('active');
+                event.target.classList.add('active');
+            }
+        }
+
+        // Add floating emojis
+        function createFloatingEmoji() {
+            const emojis = ['💰', '📈', '📉', '🏦', '💳', '💸'];
+            const emoji = document.createElement('div');
+            emoji.className = 'floating-emoji';
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.style.left = Math.random() * 100 + '%';
+            emoji.style.top = Math.random() * 100 + '%';
+            emoji.style.animationDuration = (2 + Math.random() * 2) + 's';
+            document.body.appendChild(emoji);
+            
+            setTimeout(() => emoji.remove(), 5000);
+        }
+
+        setInterval(createFloatingEmoji, 3000);
+
+        // Bar chart hover effects
+        document.querySelectorAll('.bar').forEach(bar => {
+            bar.addEventListener('mouseenter', function() {
+                this.style.transform = 'scaleY(1.05)';
+            });
+            bar.addEventListener('mouseleave', function() {
+                this.style.transform = 'scaleY(1)';
+            });
+        });
+
+        // Animate sections on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Add click effects to stat cards
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(1.1) rotate(5deg)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 300);
+            });
+        });
+
+        // Initial trigger
+        slider.dispatchEvent(new Event('input'));
+    </script>
+</body>
+</html>
